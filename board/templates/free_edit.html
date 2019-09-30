@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% load staticfiles %}
+<style>
+    body{
+        margin-top: 5%;
+    }
+
+    .sub{
+    margin-left : 65%;
+    }
+</style>
+
+<form action="{% url 'free_edit' free_detail.id %}" method="POST">
+    {{edit_free_form.as_p|safe}}
+    {% csrf_token %}
+    {{edit_free_form.media}}
+
+<input class ="sub" type="submit" value="수정완료">
+
+</form>
+
+{% endblock contents %}

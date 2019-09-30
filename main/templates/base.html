@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SPNU : 부산대 생명자원과학대학 커뮤니티</title>
+    
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+
+        $(document).ready(function(){
+            $('.nav-content').hover(function(){
+                $('.nav-content').toggle()
+                
+            });
+            });
+
+        
+    </script> -->
+    
+    
+    
+    
+    <link rel="stylesheet" href="{% static 'css/test1.css' %}" type="text/css">
+</head>
+<body>
+    <header>
+        <a href = "{% url 'index' %}"><div class="Logo">SPNU</div></a>
+        <div class="Nav-line3-container">
+            <div id="NavLine1"></div>
+            <div id="NavLine2"></div>
+            <div id="NavLine3"></div>
+
+        </div>
+        
+    {% if user.is_authenticated %}
+        <div class="Login">
+            <a class="Login-In" href="{% url 'logout' %}">로그아웃</a>
+    {%else%}
+            <a class="Login-Out" href="{% url 'login' %}">로그인</a>
+    {%endif%}
+        </div>
+        <div class="UserMail">{{user.email}}</div>
+
+
+    </header>
+    <nav>
+        <div class="nav-head"></div>
+        <div class="nav-content">
+            <div class="nav-icon"><a href="{% url 'notice' %}">공지게시판</a></div>
+            <div class="nav-icon"><a href="{% url 'free' %}">자유게시판</a></div>
+            <div class="nav-icon"><a href="{% url 'image' %}">S-album</a></div>
+            <div class="nav-icon"><a href="{% url 'delivery' %}">S-배달</a></div>
+        </div>
+    </nav>
+    <div class="content">
+        
+        <div class="PageContent">
+
+            {% block contents %}
+            <!-- 내용 Input -->
+            {% endblock %}
+
+        </div>
+    </div>
+    <footer></footer>
+    
+</body>
+</html>
+

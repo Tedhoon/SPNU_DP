@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Dokdo|East+Sea+Dokdo|Nanum+Pen+Script|Noto+Sans+JP:500,700,900|Titillium+Web:400,600,700,900&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color : white;
+    margin : 0;
+    
+}
+header {
+    width : 98%;
+    height : 35px;
+    background-color : white;
+    border-bottom: 1px rgb(192, 192, 192) solid;
+    position : fixed;
+    top : 0;
+    z-index: 3;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    /* background-color: red; */
+}
+.Logo {
+    width : 150px;
+    height : 35px;
+    margin : 0 auto;
+    float : left;
+    margin-left : 60px;
+    padding-top : 0px;
+    padding-bottom : 4px;
+    position : fixed;
+    z-index: 2;
+    font-size : 20pt;
+    font-weight: 700;
+    color : rgb(54, 19, 6);
+    font-family: 'Titillium Web', sans-serif;
+}
+.Nav-line3-container {
+    display : none;
+}
+.UserMail {
+    width : 200px;
+    height : 100%;
+    /* margin : 0 auto; */
+    float  :right;
+    text-align: right;
+    padding-top : 9px;
+    font-size: 14pt;
+    font-family: 'Dokdo', cursive;
+    margin-right : 10px;
+
+    /* background-color : pink; */
+}
+.Login-In, .Login-Out {
+    /* background-color : yellow; */
+    width : 70px;
+    float : right;
+    text-align : right;
+    margin-top : 11px;
+    font-size : 15pt;
+    margin-right : 100px;
+    text-decoration: none;
+    color : black;
+    font-family: 'Dokdo', cursive;
+}
+
+/* nav가 위에 있는 레이어 */
+nav {
+    width : 200px;
+    height : 100%;
+    background-color : rgb(100,90,70);
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    text-align: center;
+    z-index: 1;
+
+}
+.nav-head {
+    width : 100%;
+    height : 40px;
+    background-color : white;
+    top : 0;
+    left : 0;
+}
+.nav-content {
+    width : 100%;
+    height : 100%;
+    top : 35px;
+    left : 0;
+    padding-top : 45px;
+    text-decoration: none;
+
+}
+.nav>a , .Logo>a, header>a {
+    text-decoration: none;
+}
+.nav-icon {
+    width : 90%;
+    height : 40px;
+    text-align : center;
+    margin : 10px auto;
+    letter-spacing: 1pt;
+}
+.nav-icon>a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size : 10pt;
+    color : white;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* content가 아래있는 레이어 */
+.content {
+    width : 70%;
+    height : 100%;
+    /* position : fixed; */
+    top : 35px;
+    margin-right : 100px;
+    margin-left : 200px;
+    margin-top : 10px;
+    margin-bottom : 40px;
+    padding-left : 50px;
+    padding-bottom : 50px;
+
+}
+.board-Top {
+    width : 100%;
+    /* background-color : green; */
+    margin-top : 100px !important ;
+}
+.PageName {
+    width : 40%;
+    height : 28px;
+    border-left : 5px solid rgb(170,165,125);
+    padding-left : 10px;
+    margin-bottom : 12px;
+    font-size : 15pt;
+    font-weight: 800;
+    /* background-color : red; */
+}
+
+.plusbtn {
+    width : 15px;
+    /* background-color: blue; */
+}
+
+
+.PageContent {
+    width : 100%;
+    margin-top : 120px;
+    height : 460px;
+    /* padding-right : 100px; */
+    /* background-color : skyblue; */
+}
+
+.TextPlusBtn {
+    width : 55px;
+    height : 25px;
+    background-color : rgb(170,165,125);
+    text-align : center;
+    margin-top : 40px;
+    float : right;
+    
+}
+.TextPlusBtn>a {
+    text-decoration : none;
+    color : white;
+    font-size : 10pt;
+    letter-spacing: 1px;
+}
+footer {
+    width : 100%;
+    height : 35px;
+    /* border-top : 1px solid rgb(223, 223, 223); */
+    position : fixed;
+    bottom : 0px;
+    margin-left : 200px;
+}
+
+
+/* notice.css내용 */
+.board-content{
+    width : 100%;
+    height : 85%;
+    /* background-color : pink; */
+    padding-top : 20px;
+    font-size : 12pt;
+}
+
+
+/* table */
+table {
+    width : 100%;
+    height : 100%;
+    border-collapse : collapse;
+
+}
+thead {
+    border-top : 2px solid black;
+    border-bottom : 1px solid gray;
+}
+tr, th {
+    text-align : center;
+    padding-left : 10px;
+}
+th {
+    padding-top : 15px;
+    padding-bottom: 15px;
+    font-size : 12pt;
+}
+td {
+    padding-top : 7px;
+    padding-bottom : 7px;
+    font-size : 11pt;
+}
+
+.table-title>a {
+    text-decoration : none; 
+    color : black;
+    text-align: left;
+    padding : 0;
+}
+.table-number {
+    color : rgb(51, 50, 50);
+
+}
+.table-title {
+    font-weight: 500;
+    /* padding : 0 130px; */
+    text-align : left !important;
+    /* background-color: red; */
+}
+.
+.table-author {
+    color : rgb(51, 50, 50);
+    padding-left : 0 70px;
+}
+.table-date {
+    color :rgb(70, 69, 69);
+    font-size : 9pt;
+}
+.table-hits {
+    color : rgb(100,90,70);
+}
+
+
+/* 페이지네이션 */
+.Pagenation {
+    margin-top : 80px;
+    width : 100%;
+    text-align: center;
+    /* background-color : red; */
+    color : rgb(97, 96, 96);
+    font-size :11pt;
+}
+.Pagenation>a {
+    text-decoration : none;
+    color : rgb(63, 61, 61);
+
+}
+.goLastPage {
+    margin-right : 12px;
+}
+.goNextPage {
+    margin-left : 12px;
+}
+
+
+/* 생자대 배달 */
+.photo-content {
+    width : 100%;
+    height : 530px;
+    /* background-color :red; */
+    padding-top : 40px;
+    /* display: flex; */
+}
+
+.deliveryContents {
+    /* background-color: gray; */
+    width : 220px;
+    height : 270px;
+    display : block;
+    float : left;
+    margin-right : 45px;
+    margin-bottom: 80px;
+}
+.deliveryContents>a {
+    text-decoration : none;
+    color : black;
+}
+.photoSpace {
+    background-color : rgb(185, 185, 185);
+    width : 100%;
+    height : 220px;
+    
+}
+.delivery-photo {
+    /* background-color : blue; */
+    width : 100%;
+    height : auto;
+    
+}
+.delivery-text {
+    width : 100%;
+    padding-top : 12px;
+
+}
+.delivery-title {
+    font-size : 11pt;
+    font-weight: 700;
+}
+.delivery-price {
+    font-size : 10pt;
+    font-weight: 400;
+    color : rgb(100, 100, 100);
+}
+
+/* 앨범 */
+.imageContents {
+    /* background-color: orange; */
+    width : 220px;
+    height : 210px;
+    display : block;
+    float : left;
+    margin-right : 45px;
+    margin-bottom: 80px;
+    border : solid 3px rgb(190, 190, 190);
+    /* border-top : 10px solid rgb(190, 190, 190);
+    border-bottom : 10px solid rgb(190, 190, 190); */
+    border-radius: 1rem;
+}
+
+.photoSpace {
+    /* background-color : purple; */
+    width : 100%;
+    height : 170px;
+    overflow: hidden;
+    
+}
+.image-photo {
+    /* background-color : blue; */
+    width : 100%;
+    height : auto;
+    
+}
+.photoText {
+    width : 100%;
+    padding-top : 6px;
+    margin-left : 4px;
+    /* background-color : green; */
+
+}
+.imageContents >a {
+    text-decoration : none;
+    color : black; 
+}
+.photoTag-tag {
+    font-size : 11pt;
+    font-weight: 700;
+}
+.photoTag-likes {
+    float: right;
+    /* background-color : blue; */
+    width : 42px;
+    padding-right : 12px;
+    margin-bottom: 2px;
+}
+
+.heart {
+    width : 18px;
+    float : left;
+    
+}
+.heartNum {
+    font-size : 11pt;
+    color : rgb(53, 47, 34);
+    padding-left : 5px;
+    font-weight: 600;
+    /* background-color : pink; */
+    float: right;
+}
+
+/* detail page */
+.DetailContents {
+    width : 100%;
+    height : 700px;
+    /* background-color : yellow; */
+    margin-top : 130px;
+    margin-left : 30px;
+}
+.Flower {
+    float : left;
+    width : 80px;
+    /* background-color: red; */
+    
+}
+
+.Writer {
+    width : 80%;
+    height : 100px;
+    margin-left : 90px;
+    /* background-color : orange; */
+    /* border-bottom : gray 1px solid; */
+}
+
+.writerName {
+    width : 100%;
+    /* background-color : green; */
+    float : left;
+    /* margin-left : 15px; */
+    margin-top : 20px;
+    margin-bottom : 5px;
+    font-size : 13pt;
+}
+.writeTime {
+    width : 50%;
+    /* background-color : green; */
+    float : left;
+    /* margin-left : 15px; */
+    /* margin-top : 5px; */
+    font-size : 10pt;
+    color : gray;
+    /* background-color : red; */
+}
+.ModifyRemove {
+    width : 30%;
+    float : right;
+    /* background-color : blue; */
+    font-size : 11pt;
+    text-align : right;
+    
+    
+}
+.ModifyRemove >a {
+    text-decoration : none;
+    color : rgb(124, 124, 124);
+}
+
+.board-Text {
+    /* background-color : red; */
+    width : 80%;
+    margin-left : 90px;
+}
+
+.board-title {
+    width : 100%;
+    height : 60px;
+    /* background-color : purple; */
+    font-size : 20pt;
+    font-weight: 800; 
+}
+
+
+/* 앨범 디테일페이지 */
+.albumBox {
+    width : 60%;
+    height : 500px;
+    /* background-color : red; */
+    margin-left : 180px;
+    position : fixed;
+    border : 1px solid gray;
+    border-radius: 2rem;
+}
+.albumPhoto {
+    width :450px;
+    height : 480px;
+    /* background-color : yellow; */
+    position : fixed;
+    margin-top : 30px;
+    float : left;
+    text-align: center;
+
+}
+.albumContents {
+    width : 450px;
+    height : 480px;
+    /* background-color : orange; */
+    position : fixed;
+    margin-top : 30px;
+    float : right;
+    margin-left : 460px;
+    padding-left : 20px;
+
+}
+.album-title {
+    font-size : 20pt;
+    /* background-color : pink; */
+    width : 100%;
+    font-weight: 600;
+    margin-top : 20px;
+    margin-bottom : 10px;
+    
+}
+.album-author {
+    font-size : 11pt;
+    /* background-color : pink; */
+    width : 100%;
+    font-weight: 500;
+}
+.album-created_date {
+    font-size : 11pt;
+    /* background-color : pink; */
+    width : 100%;
+    font-weight: 400;
+    color : gray;
+}
+.album-desc {
+    margin-top : 10px;
+    font-size : 10pt;
+    /* background-color : pink; */
+    width : 100%;
+    height : 250px;
+    font-weight: 400;
+}
+.album-likes {
+    margin-top : 10px;
+    font-size : 12pt;
+    /* background-color : pink; */
+    width : 100%;
+    font-weight: 600;
+    color : rgb(170,165,125);
+}
+
+.albumHeart {
+    width : 100%;
+    margin-right : 3px;
+}
+.album-likescount {
+    width : 100%;
+    margin-left : 3px;
+}
+.album-modify_delete>a {
+    text-decoration: none;
+    color : black;
+    margin-top : 10px;
+}
+
+
+
+/* phone */
+@media (max-width : 380px) {
+
+
+}
+
+
+@media (max-width : 430px) {
+    .content {
+        width : 100%;
+        height : 100%;
+        margin : 0 auto;
+        padding : 0;
+        /* background-color :pink; */
+    
+    }
+    .PageContent {
+        padding : 0;
+    }
+    .UserMail {
+        display : none;
+    }
+    .board-title {
+        font-size : 17pt;
+        /* background-color : blue; */
+        padding: 0;
+
+    }
+    .board-content {
+        font-size : 11pt;
+        /* background-color : red; */
+        padding-top : 0;
+        margin-top : 0;
+    }
+    .PageName {
+        font-size : 12pt;
+    }
+
+}
+@media (max-width : 769px) {
+
+
+    /* 게시판 디테일페이지 */
+    .content {
+        width : 70%;
+        height : 50%;
+        margin : 0 auto;
+        padding : 0;
+        /* background-color :pink; */
+    
+    }
+    .DetailContents {
+        /* background-color : purple; */
+        width : 100%;
+        margin : 0 auto;
+    }
+    .Writer {
+        width : 100%;
+        height : 100px;
+        margin : 0;
+        float : left;
+        /* background-color : orange; */
+        /* padding-top : 60px; */
+        /* border-bottom : gray 1px solid; */
+    }
+    .board-Text {
+        /* background-color : red; */
+        width : 100%;
+        margin : 0;
+        float : left;
+        padding-bottom : 80px;
+    }
+
+}
+@media (max-width : 940px){
+    /* 게시판페이지 */
+    nav {
+        display : none;
+    }
+    .Logo {
+        display : none;
+    }
+
+    .Nav-line3-container {
+        display: block;
+        width : 30px;
+        height : 20px;
+        /* background-color : red; */
+        float : left;
+        margin-left : 20px;
+        margin-top : 10px;
+    }
+    #NavLine1 {
+        border-top : rgb(83, 83, 83) 4px solid;
+        margin-bottom : 3px;
+    }
+    #NavLine2 {
+        border-top : rgb(83, 83, 83) 4px solid;
+        margin-bottom : 3px;
+
+    }
+    #NavLine3 {
+        border-top : rgb(83, 83, 83) 4px solid;
+    }
+    .Login-In, .Login-Out {
+        margin-right : 30px;
+    }
+    .content {
+        width : 90%;
+        height : 80%;
+        margin : 0 auto;
+        padding : 0;
+        /* background-color :pink; */
+    }
+    th {
+        padding-top : 8px;
+        padding-bottom: 8px;
+        font-size : 9pt;
+    }
+    td {
+        padding-top : 5px;
+        padding-bottom : 5px;
+        font-size : 8pt;
+    }
+    table {
+        width : 100%;
+        height : 80%;
+        border-collapse : collapse;
+    
+    }
+    .Pagenation {
+        /* background-color : red; */
+        margin-bottom : 100px;
+    }
+    .Writer {
+        padding-top : 0;
+    }
+}

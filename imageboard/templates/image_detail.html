@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% load staticfiles%}
+
+<div class="DetailContents">
+    <div class="albumBox">
+        <div class="albumPhoto"> <img width="300px" src="{{image_detail.image.url}}"> </div>
+        <div class="albumContents">
+            <div class="album-title">{{image_detail.title}}</div>
+            <div class="album-author">{{image_detail.author}}</div>
+            <div class="album-created_date">{{image_detail.created_date}}</div>
+            <div class="album-desc">{{image_detail.desc}}</div>
+            
+            <div class="album-likes">
+                <div class="albumHeart">
+                    <img class="heart" src="{% static 'img/hearts.png' %}">
+                </div>
+                <div class="album-likescount">
+                    {{ image_detail.likes.count }}
+                </div>
+
+            </div>
+            <div class="album-modify_delete">
+                {% if user.is_authenticated and user.username == image_detail.author.username %}
+
+                    <a href="{% url 'image_edit' image_detail.id %}">수정</a>
+                    <a href="{% url 'image_delete' image_detail.id %}">삭제</a>
+                
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+
+<div style="display :none;">{{image_detail.update_counter}} </div>    
+
+</div>
+
+
+
+{% endblock contents %}

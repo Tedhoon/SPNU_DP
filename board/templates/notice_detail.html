@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% load staticfiles%}
+
+
+<div class="DetailContents">
+
+    <div class="Writer">
+        <div class="Flower">
+            <!-- <img src="{% static 'img/flower.png' %}"> -->
+        </div>
+        <div class="writerName">{{notice_detail.author}}</div>
+        <div class="writeTime">{{notice_detail.created_date}}</div>
+        
+
+
+        <div class="ModifyRemove">
+            {% if user.is_authenticated and user.username == notice_detail.author.username and user.is_staff %}
+
+            <a href="{% url 'notice_edit' notice_detail.id %}">수정 /</a>
+            <a href="{% url 'notice_delete' notice_detail.id %}">삭제</a>
+
+            {% endif %}
+
+        </div>
+    </div>
+    <div class="board-Text">
+
+        <div class="board-title">{{notice_detail.title|safe}}</div>
+
+        <div class="board-content">{{notice_detail.text|safe}}</div>
+    </div>
+
+</div>
+
+
+<div style="display :none;">{{notice_detail.update_counter}}</div>
+
+
+
+
+{% endblock contents %}
+     

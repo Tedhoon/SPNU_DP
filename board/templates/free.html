@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+{% load staticfiles %}
+{% load hitcount_tags %}
+
+<div class="board-Top">
+    <div class="PageName">자유게시판</div>
+
+</div>
+
+
+
+<div class="board-content">
+    <table>
+        <thead>
+        <tr>
+            <th>No.</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+        </tr>
+        </thead>
+
+        {% for free in free_posts %}
+        <tbody>
+        <tr>
+            <td class="table-number">{{free.id}}</td>
+            <td class="table-title"><a href="{%url 'free_detail' free.id%}">{{free.title}}</a></td>
+            <td class="table-author">{{free.author}}</td>
+            <td class="table-date">{{free.created_date}}</td>
+            <td class="table-hits">{% get_hit_count for free %}</td>
+        </tr>    
+        </tbody>
+        {% endfor %}
+
+    </table>
+    
+        {%if user.is_authenticated %}
+            <div class="TextPlusBtn">
+            <a href="{% url 'free_post'%}">글작성
+            
+            <!-- <img class="plusbtn" src="{% static 'img/add.png'%}"> -->
+            </a>
+            </div>
+        {% endif %}
+    
+    
+    <div class="Pagenation">
+        {# 페이지네이션을 통한 객체 불러오기 #}
+        <br> 
+
+        {% if free_posts.has_previous %}
+        <!-- <a href="?page=1">First</a> -->
+        <a class="goLastPage" href="?page={{free_posts.previous_page_number}}">Last</a>
+        {% endif %}
+        <b>{{free_posts.number}}</b>
+        <span>/</span>
+        <small>{{free_posts.paginator.num_pages}}</small> 
+
+
+        {% if free_posts.has_next %} 
+        <a  href="?page={{free_posts.paginator.num_pages}}"></a> 
+        
+       
+        
+        <a class="goNextPage" href="?page={{free_posts.next_page_number}}">Next</a>
+
+        {% endif %}
+    </div>
+    
+</div>
+
+{% endblock contents %}

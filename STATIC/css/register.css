@@ -1,0 +1,172 @@
+body{
+    background: #fff;
+    /*
+    하하하하하하하하
+    */
+}
+form {
+    width: 320px;
+    padding: 60px 25px 40px;
+    margin: 50px auto;
+    border-radius: 20px;
+    /* background: #4776E6;  fallback for old browsers */
+    /* background: -webkit-linear-gradient(to left, #8E54E9, #4776E6);  Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to left, #8E54E9, #4776E6); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    flex-direction: column;
+}
+svg {
+    width: 70%;
+    border-radius: 50%;
+    /* background: #fff; */
+    margin-bottom: 40px;
+    align-self: center;
+    transform-style: preserve-3d;
+}
+input {
+    font-size: 16px;
+    border-radius: 5px;
+    outline: 0;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+label,span {
+    display: none;
+}
+
+#id_username, #id_password, #id_email, #id_password2 {
+    width: 290px;
+    font-size: 16px;
+    border: 1px #000 solid;
+    border-radius: 5px;
+    outline: 0;
+    padding: 10px 15px;
+    margin-top: 0px;
+}
+
+#Login_sign{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#Sign{
+    border: 1px #000 solid;
+    width: 320px;
+    font-size: 15px;
+    border-radius: 5px;
+    background: #fff;
+    outline: 0;
+    padding: 10px 15px;
+    margin-top: 15px;
+    
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+
+    float: left;
+}
+/*
+#Sign:hover{
+    width: 60%;
+    background-color: rgb(57, 91, 152);
+    transition: 0.21s ease-in;
+    
+}
+#Sign:hover ~ #Login_button{
+    width: 15%;
+    
+}
+#Login_button:hover{
+    width: 60%;
+    background-color: rgb(57, 91, 152);
+    transition: 0.21s ease-in;
+
+}
+#Login_button:hover ~ #Sign{ 
+    width: 15%;
+
+}
+*/
+#Lost{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: center;
+    padding: 20px 15px;
+    margin-bottom: -15px;
+}
+@keyframes lookaway-up {
+    from {
+        transform: rotate3d(.2, 0, -.01, 20deg);
+    }
+
+    to {
+        transform: rotate3d(.2, -.05, -.01, 20deg);
+    }
+}
+
+@keyframes lookaway-down {
+    0% {
+        transform: rotate3d(-.2, 0, -.01, 20deg);
+    }
+
+    100% {
+        transform: rotate3d(-.2, -.05, .01, 20deg);
+    }
+}
+
+.ears {
+    transform-origin: 50% 50% 5px;
+}
+
+.eyes {
+    transform-origin: 50% 50% -40px;
+}
+
+.muzzle {
+    transform-origin: 50% 50% -44px;
+}
+
+.ears, .eyes, .muzzle {
+    transition: transform .5s;
+}
+
+.focused {
+    transition: transform .1s;
+}
+
+.look-away .ears,
+.look-away .eyes,
+.look-away .muzzle {
+    transition-duration: .3s;
+    animation: 3s infinite alternate;
+}
+
+.look-away.up .ears,
+.look-away.up .eyes,
+.look-away.up .muzzle {
+    transform: rotate3d(.2, 0, 0, 20deg) !important;
+}
+
+.look-away.down .ears,
+.look-away.down .eyes,
+.look-away.down .muzzle {
+    transform: rotate3d(-.2, 0, 0, 20deg) !important;    
+}
+
+.look-away.playing.up .ears,
+.look-away.playing.up .eyes,
+.look-away.playing.up .muzzle {
+    animation-name: lookaway-up;
+}
+
+.look-away.playing.down .ears,
+.look-away.playing.down .eyes,
+.look-away.playing.down .muzzle {
+    animation-name: lookaway-down;
+}
+

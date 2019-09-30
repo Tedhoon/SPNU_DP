@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap'); 
+/* font-family: 'Righteous', cursive; */
+
+.Nav {
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(182, 100, 100); */
+    height: 120px;
+    position: relative;
+}
+
+/* Nav-logo */
+.Nav-logo{
+    /* background-color: rgb(131, 211, 207); */
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    margin-left: 30px;
+}
+
+.Nav-logo h1{
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-family: 'Righteous', cursive;
+}
+
+/* Nav-prof(profile) */
+.Nav-prof{
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    border-bottom: 4px #000 solid;
+
+    padding: 0 2px;
+    /* background-color: rgb(21, 192, 149); */
+    
+}
+
+.Nav-prof a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* Nav-login */
+.Nav-login{
+    display: inline-block;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    border-bottom: 4px #000 solid;
+    padding: 0 2px;
+
+    /* background-color: rgb(86, 78, 196); */
+}
+
+.Nav-login a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 13px;
+}
+

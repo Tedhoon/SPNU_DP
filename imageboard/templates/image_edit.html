@@ -1,0 +1,6 @@
+<form action="{% url 'image_edit' image_detail.id %}" method="POST" enctype="multipart/form-data">
+    {{edit_image_form.as_p}}
+    {% csrf_token %}
+<input type="submit" value="수정완료">
+
+</form>

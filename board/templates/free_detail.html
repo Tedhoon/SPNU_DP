@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% load staticfiles%}
+
+<div class="DetailContents">
+
+    <div class="Writer">
+        <div class="Flower">
+            <!-- <img width="80px" src="{% static 'img/flower.png' %}"> -->
+        </div>
+        <div class="writerName">{{free_detail.author}}</div>
+        <div class="writeTime">{{free_detail.created_date}}</div>
+        <div class="ModifyRemove">
+            {% if user.is_authenticated and user.username == free_detail.author.username %}
+        
+            <a href="{% url 'free_edit' free_detail.id %}">수정 /</a>
+            <a href="{% url 'free_delete' free_detail.id %}">삭제</a>
+        
+            {% endif %}
+        
+        </div>
+            
+    </div>
+
+    <div class="board-Text">
+        
+        <div class="board-title">{{free_detail.title}}</div>
+        
+        <div class="board-content">{{free_detail.text|safe}}</div>
+    </div>
+
+</div>
+
+<div style="display :none;">{{free_detail.update_counter}} </div>
+
+     
+{% endblock contents %}

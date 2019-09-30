@@ -1,0 +1,121 @@
+body {
+    background-color : white;
+    margin : 0;
+}
+header {
+    width : 100%;
+    height : 35px;
+    background-color : white;
+    border-bottom: 1px rgb(192, 192, 192) solid;
+}
+.Logo {
+    width : 150px;
+    height : 35px;
+    margin : 0 auto;
+    float : left;
+    margin-left : 50px;
+    padding-top : 9px;
+    position : fixed;
+    z-index: 2;
+    font-size : 13pt;
+}
+.UserMail {
+    width : 200px;
+    height : 100%;
+    margin : 0 auto;
+    float  :right;
+    margin-right : 100px;
+    text-align: right;
+    padding-top : 9px;
+    font-size: 10pt;
+}
+/* nav가 위에 있는 레이어 */
+nav {
+    width : 200px;
+    height : 100%;
+    background-color : rgb(10, 51, 6);
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    text-align: center;
+    z-index: 1;
+
+}
+.nav-head {
+    width : 100%;
+    height : 35px;
+    background-color : white;
+    top : 0;
+    left : 0;
+}
+.nav-content {
+    width : 100%;
+    height : 100%;
+    top : 35px;
+    left : 0;
+    padding-top : 30px;
+}
+.nav-icon {
+    width : 90%;
+    height : 40px;
+    text-align : center;
+    margin : 10px auto;
+    color : white;
+    font-size : 10pt;
+    font-weight: 600;
+    letter-spacing: 1pt;
+}
+/* content가 아래있는 레이어 */
+.content {
+    width : 80%;
+    height : 100%;
+    position : fixed;
+    top : 35px;
+    margin-right : 100px;
+    margin-left : 200px;
+    margin-top : 40px;
+    margin-bottom : 40px;
+    padding-left : 50px;
+    padding-bottom : 50px;
+
+}
+.PageName {
+    width : 90px;
+    margin-top : 0;
+    height : 28px;
+    border-bottom : 3px solid rgb(10, 51, 6);
+    padding-left : 10px;
+    font-size : 12pt;
+    font-weight: 800;
+}
+.PageContent {
+    width : 100%;
+    margin-top : 40px;
+    height : 355px;
+    padding-right : 100px;
+}
+footer {
+    width : 100%;
+    height : 35px;
+    border-top : 1px solid rgb(223, 223, 223);
+    position : fixed;
+    bottom : 0px;
+    margin-left : 200px;
+}
+
+/* phone */
+@media (max-width : 320px) {
+
+}
+/* tablets */
+
+@media (max-width : 991px) {
+
+}
+
+@media (max-width : 767px) {
+
+}
+@media (max-width : 769px) {
+
+}

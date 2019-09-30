@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>생자대 커뮤니티</title>
+
+</head>
+<body>
+    <div class="Top">
+        <div class="Logo"><a href="">SPNU</a></div>
+        <!-- <div class="Bus"><a href="{% url 'bus' %}"><img src="{%static 'img/mainBus.png'%}"></a></div>
+        <div class="FoodMenu"><a href="{% url 'menu' %}"><img src="{%static 'img/mainRice.png'%}"></a></div> -->
+        <div class="LogInOut">    
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">로그아웃</a>
+            
+            <!-- <a href="#">프로필</a> -->
+            
+            {%else%}
+            <a href="{% url 'login' %}">로그인</a>
+                
+            {%endif%}
+        </div>
+    </div>
+
+    <div class="Main">
+        <div class="Hello">
+            <div class="busriceImg-container">
+                <div class="Bus"><a href="{% url 'bus' %}"><img src="{%static 'img/mainBus.png'%}"></a></div>
+                <div class="FoodMenu"><a href="{% url 'menu' %}"><img src="{%static 'img/mainRice.png'%}"></a></div>
+                <!-- 유저 : {{user.username}} <br>
+                이메일 : {{user.email}} -->
+            </div>
+        </div>
+        <div class="Icon">
+            <table class="aa">
+                <tr>
+                    <th>
+                        <div class="Icons">
+                            <a href="{% url 'notice' %}">
+                                <div class="photo"><img id="animal1" src="{% static 'img/cat.png'%}"></div>
+                                <div class="iconsName">공지게시판</div>
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="Icons">
+                            <a href="{% url 'free' %}">
+                                <div class="photo"><img id="animal2" src="{% static 'img/rabbit.png'%}"></div>
+                                <div class="iconsName">자유게시판</div>
+                            </a>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="Icons">
+                            <a href="{% url 'image' %}">
+                                <div class="photo"><img id="animal3" src="{% static 'img/bear.png'%}"></div>
+                                <div class="iconsName">생자대생활</div>
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="Icons">
+                            <a href="{% url 'delivery' %}">
+                                <div class="photo"><img id="animal4" src="{% static 'img/giraffe.png'%}"></div>
+                                <div class="iconsName">생자대배달</div>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="Icons">
+                            <a href="">
+                                <div class="photo"><img id="animal5" src="{% static 'img/squirrel.png'%}"></div>
+                                <div class="iconsName">홍보게시판</div>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="Icons">
+                            <a href="">
+                                <div class="photo"><img id="animal6" src="{% static 'img/elephant.png'%}"></div>
+                                <div class="iconsName">분실물</div>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

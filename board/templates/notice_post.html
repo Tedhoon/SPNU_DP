@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% load staticfiles %}
+<style>
+    body{
+        margin-top: 5%;
+    }
+
+    .sub{
+    margin-left : 65%;
+    }
+</style>
+
+    
+    <form action="{% url 'notice_post'%}" method="POST" enctype="multipart/form-data">
+        
+        {{ notice_form.media }}     
+        {{ notice_form.as_p|safe }}
+
+        {% csrf_token %}
+    
+        
+        <input class ="sub" type="submit" value="글쓰기">
+    </form> 
+        
+
+
+{% endblock contents %}

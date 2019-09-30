@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Dokdo|East+Sea+Dokdo|Nanum+Pen+Script|Noto+Sans+JP:500,700,900|Titillium+Web:400,600,700,900&display=swap&subset=korean');
+body {
+    width : 100%;
+    height : 100%;
+    background-color: rgb(219, 212, 205);
+    margin : 0;
+    /* font-family: 'East Sea Dokdo', cursive;
+    font-family: 'Dokdo', cursive;
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Nanum Pen Script', cursive; */
+}
+
+/* top */
+.Top {
+    width : 100%;
+    height : 80px;
+    position : fixed;
+    /* background-color: brown; */
+}
+.Logo >a {
+    text-decoration : none;
+    color : rgb(54, 19, 6);
+}
+.Logo {
+    width : 30%;
+    height : 70%;
+    margin : 0 auto;
+    /* float : left; */
+    font-size: 13pt;
+    text-align: center;
+    /* margin-left : 100px; */
+    font-size : 20pt;
+    font-weight: 700;
+    padding-top : 22px;
+    /* background-color: aquamarine; */
+    font-family: 'Titillium Web', sans-serif;
+    /* position : fixed; */
+    
+}
+.LogInOut{
+    text-align: right;
+    padding-top : 30px;
+    font-weight: 550;
+    /* background-color: blueviolet; */
+    width : 20%;
+    height : 70px;
+    margin-right : 20px;
+    float : right;
+    position : fixed;
+    margin-left : 77%;
+    top : 0;
+    font-size : 15pt;
+
+}
+.busriceImg-container {
+    width :200px;
+    /* background-color: orange; */
+    margin : 0 auto;
+}
+.Bus {
+    width : 80px;
+    margin : 0 auto;
+    float : left;
+    /* background-color: blueviolet; */
+    margin-right : 10px;
+
+}
+.FoodMenu {
+    width : 80px;
+    margin : 0 auto;
+    /* background-color: blueviolet; */
+    float : left;
+    margin-left : 10px;
+}
+.Bus>a>img, .FoodMenu>a>img {
+    width : 60px;
+}
+
+.LogInOut>a {
+    text-decoration : none;
+    color : black;
+    font-family: 'Dokdo', cursive;
+
+
+}
+
+/* main */
+.Main {
+    position : fixed;
+    margin-top : 200px;
+    height : 520px;
+    width : 100%;
+    /* padding-left : 300px; */
+    /* padding-right : 100px; */
+    /* background-color: yellow; */
+    text-align : center;
+    padding-left : 0;
+}
+.Hello {
+    position : fixed;
+    top : 0;
+    width : 200px;
+    margin-left : 20px;
+    margin-top : 12px;
+    /* margin-top : 120px; */
+    /* margin-bottom : 200px; */
+    /* background-color : pink; */
+    /* margin : 0 auto; */
+}
+
+.Icon {
+    width : 80%;
+    text-align : center;
+    /* margin-top : 80px; */
+    height : 230px;
+    /* padding-left : 30px; */
+    /* background-color : red; */
+    margin : 0 auto;
+    font-family: 'Dokdo', cursive;
+
+
+
+}
+.Icons {
+    width : 80%;
+    /* height : 100; */
+    float : left;
+    margin-right : 30px;
+    margin-bottom : 30px;
+    /* background-color: green; */
+}
+.Icons>a {
+    text-decoration : none;
+    color : black;
+    font-weight: 200;
+}
+.photo {
+    width : 100px;
+    height : 100px;
+    background-color : rgb(170,165,125);
+    border-radius : 20rem;
+    text-align : center;
+    margin : 0 auto;
+    vertical-align : middle;
+
+}
+.photo>img {
+    width :70px;
+    height : auto;
+    padding-top : 10px;
+}
+#animal4 {
+    padding : 8px;
+}
+#animal5 {
+    padding : 20px;
+}
+#animal6 {
+    padding-top : 23px;
+    padding-right : 3px;
+}
+
+.iconsName {
+    padding-top : 5px;
+    width : 100%;
+    height : 20%;
+    text-align : center;
+    font-size : 16pt;
+
+}
+
+.aa { 
+    width : 70%;
+    border-spacing: 0; 
+    border-collapse:collapse; 
+    margin:0 auto; 
+    padding: 0;
+    text-align: center;
+    /* background-color: blueviolet; */
+    margin-top : 100px;
+}
+
+@media (max-width : 375px) {
+    /* Top */
+    .Hello {
+        position : fixed;
+        top : 0;
+        width : 50%;
+        margin-left : 20px;
+        margin-top : 12px;
+    }
+    .Logo {
+        display : none;
+    }
+    .Bus {
+        width : 50px;
+        /* background-color: blueviolet; */
+        margin-right : 3px;
+
+    }
+    .FoodMenu {
+        width : 50px;
+
+    }
+    .Bus>a>img, .FoodMenu>a>img {
+        width :50px;
+    }
+    /* Main */
+
+    .aa { 
+        width : 65%;
+        border-spacing: 0; 
+        border-collapse:collapse; 
+        margin:0 auto; 
+        padding: 0;
+        text-align: center;
+        /* background-color: blueviolet; */
+    }
+
+    .Icons {
+        width : 88%;
+        /* height : 100; */
+        /* float : left; */
+        margin-right : 10px;
+        margin-bottom : 30px;
+        /* background-color: green; */
+    }
+    .iconsName {
+        font-size : 10pt;
+    }
+    .photo {
+        width : 80px;
+        height : 80px;
+        background-color : rgb(170,165,125);
+        border-radius : 20rem;
+        text-align : center;
+        margin : 0 auto;
+        vertical-align : middle;
+    
+    }
+    .photo>img {
+        width :50px;
+        height : auto;
+        padding-top : 10px;
+    }
+
+
+}
+
+@media (max-width : 435px) {
+    /* top */
+    .Logo {
+        display : none;
+    }
+    .iconsName {
+        font-size : 12pt;
+    }
+    /* main */
+
+    .Hello {
+        position : fixed;
+        top : 0;
+        width : 20%;
+        margin-left : 10px;
+        margin-top : 12px;
+    }
+    .Bus>a>img, .FoodMenu>a>img {
+        width :50px;
+    }
+    .Bus {
+        margin :0;
+    }
+}
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>식단</title>
+
+
+    
+<script>
+    
+window.onload = function(){
+        
+
+     var modal1 = document.getElementById('myModal1');
+ 
+     var btn1 = document.getElementById("myBtn1");
+
+     var span1 = document.getElementsByClassName("close1")[0];                                          
+
+     btn1.onclick = function() {
+         modal1.style.display = "block";
+     }
+
+     span1.onclick = function() {
+         modal1.style.display = "none";
+     }
+
+     //=====================================================
+
+     var modal2 = document.getElementById('myModal2');
+ 
+     var btn2 = document.getElementById("myBtn2");
+
+     var span2 = document.getElementsByClassName("close2")[0];                                          
+
+     btn2.onclick = function() {
+         modal2.style.display = "block";
+     }
+
+     span2.onclick = function() {
+         modal2.style.display = "none";
+     }
+
+     // 모달 둘다 끄기
+     window.onclick = function(event) {
+         if (event.target == modal1 || event.target == modal2) {
+             modal1.style.display = "none";
+             modal2.style.display = "none";
+         }
+     }
+    };
+    
+    </script>
+    <style>
+        body{
+            background-color : rgb(100,90,70);
+        }
+        img{
+            border-radius: 10px;
+        }
+        .modal1 , .modal2 {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+    
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%; /* Could be more or less, depending on screen size */                          
+        }
+        /* The Close Button */
+        .close1 ,.close2 {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close1:hover, .close2:hover,
+        .close1:focus, .close2:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #myBtn1 , #myBtn2 {
+            float:left;
+            margin: 20px;
+            
+        }
+        .content_menu{
+            text-align: center;
+            margin-left: 30%;
+            margin-top : 20%;
+        }
+    
+    
+    </style>
+    
+</head>
+<body>
+
+<div class ="content_menu">
+    <!-- The Modal -->
+    <div id="myBtn1">
+            <img width = "100px;" src = "{% static 'img/dorm.jpg' %}">
+    </div>
+
+    <div id="myBtn2">
+            <img width = "100px;" src = "{% static 'img/dorm2.jpg' %}">
+    </div>
+</div>
+
+ 
+
+
+
+{% for menu in menu %}
+    <div style="display :none;">{{menu.update_counter}} </div>
+
+    <!-- The Modal -->
+    <div id="myModal1" class="modal1">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close1">&times;</span>                                                               
+        <img src ="{{menu.dorm_menu.url}}" width="100%">
+      </div>
+ 
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal2" class="modal2">
+ 
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close2">&times;</span>                                                               
+              <img src ="{{menu.hall_menu.url}}" width="100%">
+            </div>
+       
+          </div>
+{% endfor %}
+
+
+</body>
+</html>
