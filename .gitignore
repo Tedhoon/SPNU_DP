@@ -1,4 +1,6 @@
 db.sqlite3
 MEDIA
-
 __pycache__
+migrations
+settings.py
+requirements.txt
