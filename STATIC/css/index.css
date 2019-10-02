@@ -2,144 +2,115 @@
 body {
     width : 100%;
     height : 100%;
-    background-color: rgb(219, 212, 205);
+    background-color: rgb(89,82,48);
     margin : 0;
-    /* font-family: 'East Sea Dokdo', cursive;
-    font-family: 'Dokdo', cursive;
-    font-family: 'Titillium Web', sans-serif;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-family: 'Cabin', sans-serif;
-    font-family: 'Nanum Pen Script', cursive; */
+    font-family: 'East Sea Dokdo', cursive;
+    /* font-family: 'Dokdo', cursive; */
+    /* font-family: 'Titillium Web', sans-serif; */
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    /* font-family: 'Cabin', sans-serif; */
+    /* font-family: 'Nanum Pen Script', cursive; */
 }
 
 /* top */
 .Top {
     width : 100%;
     height : 80px;
-    position : fixed;
-    /* background-color: brown; */
-}
-.Logo >a {
-    text-decoration : none;
-    color : rgb(54, 19, 6);
-}
-.Logo {
-    width : 30%;
-    height : 70%;
-    margin : 0 auto;
-    /* float : left; */
-    font-size: 13pt;
-    text-align: center;
-    /* margin-left : 100px; */
-    font-size : 20pt;
-    font-weight: 700;
-    padding-top : 22px;
-    /* background-color: aquamarine; */
-    font-family: 'Titillium Web', sans-serif;
-    /* position : fixed; */
-    
+
 }
 .LogInOut{
-    text-align: right;
-    padding-top : 30px;
+    text-align: center;
+    margin-top : 30px;
     font-weight: 550;
-    /* background-color: blueviolet; */
-    width : 20%;
-    height : 70px;
-    margin-right : 20px;
+    width : 80px;
+    height : 25px;
+    /* margin-right : -10px; */
     float : right;
-    position : fixed;
-    margin-left : 77%;
+    /* position : fixed; */
+    /* margin-left : 90%; */
     top : 0;
     font-size : 15pt;
-
+    background-color : rgb(136, 123, 96);
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
-.busriceImg-container {
-    width :200px;
-    /* background-color: orange; */
-    margin : 0 auto;
-}
-.Bus {
-    width : 80px;
-    margin : 0 auto;
-    float : left;
-    /* background-color: blueviolet; */
-    margin-right : 10px;
-
-}
-.FoodMenu {
-    width : 80px;
-    margin : 0 auto;
-    /* background-color: blueviolet; */
-    float : left;
-    margin-left : 10px;
-}
-.Bus>a>img, .FoodMenu>a>img {
-    width : 60px;
-}
-
 .LogInOut>a {
     text-decoration : none;
     color : black;
-    font-family: 'Dokdo', cursive;
-
-
+    /* font-family: 'Dokdo', cursive; */
 }
 
 /* main */
 .Main {
-    position : fixed;
-    margin-top : 200px;
+    /* margin-top : 20px; */
     height : 520px;
     width : 100%;
-    /* padding-left : 300px; */
-    /* padding-right : 100px; */
-    /* background-color: yellow; */
     text-align : center;
     padding-left : 0;
-}
-.Hello {
-    position : fixed;
-    top : 0;
-    width : 200px;
-    margin-left : 20px;
-    margin-top : 12px;
-    /* margin-top : 120px; */
-    /* margin-bottom : 200px; */
-    /* background-color : pink; */
-    /* margin : 0 auto; */
-}
+    margin : 20px 0 0 0;
 
+}
+.BusandBab {
+    margin-top : 10px;
+    width : 100%;
+    /* background : yellow;     */
+
+}
+    .main-Bus {
+        display : inline-block;
+        width : 100px;
+        height : 25px;
+        /* background : rgb(217,210,204); */
+        border :2px solid rgb(235, 200, 132);
+
+        color : rgb(195,217,201);
+        font-size : 18pt;
+        border-radius: 6px;
+        padding-bottom: 4px;
+        margin-right : 5px;
+    }
+    .main-Bus>a {
+        text-decoration: none;
+    }
+    .main-Bab {
+        display : inline-block;
+        /* background : rgb(204,177,142); */
+        border :2px solid rgb(152, 216, 213);
+        /* background : rgb(212, 197, 184); */
+
+        border-radius: 6px;
+        height : 25px;
+        padding-bottom: 4px;
+        color : rgb(195,217,201);
+        font-size : 18pt;
+        margin-left : 5px;
+        width : 100px;
+    }
+    .main-Bab>a {
+        text-decoration: none;
+    }
 .Icon {
-    width : 80%;
+    width : 100%;
     text-align : center;
-    /* margin-top : 80px; */
     height : 230px;
-    /* padding-left : 30px; */
-    /* background-color : red; */
-    margin : 0 auto;
-    font-family: 'Dokdo', cursive;
-
-
-
+    margin : -5px auto;
+    /* font-family: 'Dokdo', cursive; */
 }
 .Icons {
-    width : 80%;
-    /* height : 100; */
+    width : 70%;
     float : left;
-    margin-right : 30px;
     margin-bottom : 30px;
-    /* background-color: green; */
+    padding-left:  16px;
 }
 .Icons>a {
     text-decoration : none;
-    color : black;
-    font-weight: 200;
+    font-weight: 100;
 }
 .photo {
-    width : 100px;
-    height : 100px;
-    background-color : rgb(170,165,125);
+    width : 70px;
+    height : 70px;
+    background-color : rgb(211, 165, 128);
     border-radius : 20rem;
     text-align : center;
     margin : 0 auto;
@@ -147,7 +118,7 @@ body {
 
 }
 .photo>img {
-    width :70px;
+    width :40px;
     height : auto;
     padding-top : 10px;
 }
@@ -167,110 +138,121 @@ body {
     width : 100%;
     height : 20%;
     text-align : center;
-    font-size : 16pt;
+    font-size : 14pt;
+    color : rgb(195,217,201);
 
 }
 
 .aa { 
-    width : 70%;
+    width : 320px;
     border-spacing: 0; 
     border-collapse:collapse; 
     margin:0 auto; 
-    padding: 0;
+    padding: 0 auto;
     text-align: center;
-    /* background-color: blueviolet; */
-    margin-top : 100px;
+    margin-top : 50px;
 }
 
-@media (max-width : 375px) {
-    /* Top */
-    .Hello {
-        position : fixed;
-        top : 0;
-        width : 50%;
-        margin-left : 20px;
-        margin-top : 12px;
-    }
-    .Logo {
-        display : none;
-    }
-    .Bus {
-        width : 50px;
-        /* background-color: blueviolet; */
-        margin-right : 3px;
 
-    }
-    .FoodMenu {
-        width : 50px;
 
-    }
-    .Bus>a>img, .FoodMenu>a>img {
-        width :50px;
-    }
-    /* Main */
+footer {
 
-    .aa { 
-        width : 65%;
-        border-spacing: 0; 
-        border-collapse:collapse; 
-        margin:0 auto; 
-        padding: 0;
-        text-align: center;
-        /* background-color: blueviolet; */
-    }
-
-    .Icons {
-        width : 88%;
-        /* height : 100; */
-        /* float : left; */
-        margin-right : 10px;
-        margin-bottom : 30px;
-        /* background-color: green; */
-    }
-    .iconsName {
-        font-size : 10pt;
-    }
-    .photo {
-        width : 80px;
-        height : 80px;
-        background-color : rgb(170,165,125);
-        border-radius : 20rem;
-        text-align : center;
-        margin : 0 auto;
-        vertical-align : middle;
+    width : 100%;
+    height : 35px;
+    position : fixed;
+    bottom : 0px;
+    margin-left : 200px;
+    display :block;
+    z-index: 3;
+    /* background-color: white; */
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    margin-left: 40%;
     
+}
+
+
+@media (max-width : 940px){
+    /* 게시판페이지 */
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        margin-left: 0%;
+        
     }
+}
+
+
+@media (max-width : 769px) {
+
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        margin-left: 0%;
+        
+    }
+}
+
+
+@media (max-width : 430px) {
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        margin-left: 0%;
+        
+    }
+}
+
+
+@media (max-width : 380px) {
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        margin-left: 0%;
+        display : block;
+        z-index: 3;
+    }
+
+
+}
+
+
+@media (min-width : 1000px) {
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        margin-left: 0%;
+        display : block;
+        z-index: 3;
+    }
+
+    .photo {
+        width : 100px;
+        height : 100px;
+    }
+
     .photo>img {
-        width :50px;
-        height : auto;
-        padding-top : 10px;
+        width : 70px;
     }
-
-
-}
-
-@media (max-width : 435px) {
-    /* top */
-    .Logo {
-        display : none;
+    .main-Logo>img {
+        width : 500px;
     }
-    .iconsName {
-        font-size : 12pt;
+    .main-Bus {
+        width : 130px;
     }
-    /* main */
-
-    .Hello {
-        position : fixed;
-        top : 0;
-        width : 20%;
-        margin-left : 10px;
-        margin-top : 12px;
+    .main-Bab {
+        width : 130px;
     }
-    .Bus>a>img, .FoodMenu>a>img {
-        width :50px;
-    }
-    .Bus {
-        margin :0;
+    .aa {
+        width : 500px;
     }
 }
+
+
 

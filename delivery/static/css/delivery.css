@@ -1,0 +1,180 @@
+/* content */
+.pagecontent-delivery {
+    width : 100%;
+    margin : 70px auto;    
+    height : 100%;
+}
+.DeliveryList-Container {
+    width : 300px;
+    height : 108px;
+    float : left;
+    margin-bottom : 8px;
+    margin-right : 11px;
+    padding : 0 0 10px;
+    /* background-color : pink; */
+}   
+
+    .restaurantBox {
+        position : relative;
+        border : 1px solid #d9d9d9;
+        /* background : blueviolet; */
+        padding : 0 8px;
+        margin-bottom : 10px;
+        box-sizing : border-box;
+
+    }
+        .restaurant-list-Table {
+            height : 108px;
+            background-color : transparent;
+            border-spacing : 0;
+            border-collapse : collapse;
+            border-color : grey;
+        }
+        .restaurnt-list-tbody {
+            display : table-row-group;
+            vertical-align : middle;
+            border-color : inherit;
+        }
+        .restaurnt-list-tr {
+            display : table-row;
+            vertical-align : inherit;
+            border-color : inherit;
+        }
+        .restaurnt-list-td {
+            display : table-cell;
+            vertical-align : inherit;
+            height : 100%;
+            text-align : left;
+        }
+            #td1 {
+                /* background-color : red; */
+                width : 80px;
+                height : 70px;
+
+            }
+            .delivery-photo {
+                width : 70px;
+                height : 70px;
+                border : 1px solid #d9d9d9;
+                /* background-color : pink; */
+            }
+            .restaurants-info {
+                padding-left : 10px;
+            }
+            .restaurant-name {
+                font-size : 120%;
+                width : 100%;
+                /* background-color : red; */
+            }
+            .restaurant-deliveryCondition, .restaurant-deliveryTime {
+                font-size : 90%;
+            }
+            .restaurant-deliveryPrice {
+                font-size : 90%;
+                color : rgb(161, 152, 84);
+            }
+
+/* 모달창 */
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%; /* Could be more or less, depending on screen size */                          
+    }
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top : 0;
+        width : 20px;
+        height : 20px;
+        text-align: center;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 모달창 내부컨텐츠 구성 */
+    .modal-restaurantDelivery-info-Table {
+        width : 100%;
+        height : 150px;
+        /* background-color : orange; */
+        display : block;
+        padding : 0;
+        border-bottom : 1px solid #d9d9d9;        
+    }
+        .modal-restaurant-Name {
+            width : 100%;
+            font-size : 120%;
+            /* background-color : yellow; */
+            margin-bottom : 10px;
+        }
+        .modal-restaurant-Photo {
+            width : 80px;
+            height : 80px;
+            float : left;
+        }
+        .modal-restaurant-Photo>img {
+            width : 70px;
+            height : 70px;
+            border : 1px solid #d9d9d9;
+        }
+        .modal-restaurant-TextContainer {
+            width : 60%;
+            /* background-color : green; */
+            float : left;
+            font-size : 90%;
+            margin : 0;
+            padding : 0;
+            min-height : 80px;
+        }
+            ul>li {
+                display : block;
+                list-style: none;
+            }
+            ul {
+                padding : 0;
+                display : block;
+            }
+
+    .modal-restaurant-MenuContainer,.modal-restaurant-infoContainer {
+        width : 100%;
+        height : 100%;
+        /* background-color : red; */
+        display : block;
+        font-size : 90%;
+
+    }
+    
+@media ( max-width : 425px) {
+    .modal-content {
+        width : 62%;
+    }
+}
+@media (max-width : 870px) {
+    .pagecontent-delivery {
+        margin : 40px auto; 
+    }
+}

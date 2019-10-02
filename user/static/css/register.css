@@ -1,8 +1,7 @@
 body{
-    background: #fff;
-    /*
-    하하하하하하하하
-    */
+    /* background: #fff; */
+    background-color : rgb(114, 107, 92);
+
 }
 form {
     width: 320px;

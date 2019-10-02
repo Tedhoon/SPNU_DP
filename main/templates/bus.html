@@ -5,128 +5,217 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bus.css'%}" type="text/css">
+
     <title>식단</title>
-
-
-
-    
-<script>
-    
-window.onload = function(){
-        
-
-     // Get the modal
-     var modal = document.getElementById('myModal');
- 
-     // Get the button that opens the modal
-     var btn = document.getElementById("myBtn");
-
-     // Get the <span> element that closes the modal
-     var span = document.getElementsByClassName("close")[0];                                          
-
-     // When the user clicks on the button, open the modal 
-     btn.onclick = function() {
-         modal.style.display = "block";
-     }
-
-     // When the user clicks on <span> (x), close the modal
-     span.onclick = function() {
-         modal.style.display = "none";
-     }
-
-     // When the user clicks anywhere outside of the modal, close it
-     window.onclick = function(event) {
-         if (event.target == modal) {
-             modal.style.display = "none";
-         }
-     }
-    };
-    
-    </script>
-    <style>
-        
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
-    
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-
-            padding: 20px;
-            border: 1px solid #888;
-            width: 50%; /* Could be more or less, depending on screen size */                          
-        }
-        /* The Close Button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #myBtn {
-
-            margin: 20px;
-            
-        }
-        .content_menu{
-            text-align: center;
-
-            margin-top : 15%;
-        }
-        
-        img{
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-    
-    </style>
-    
 </head>
 <body>
 
-<div class ="content_menu">
-    <!-- The Modal -->
-    <div id="myBtn">
-            <img width = "100px;" src = "{% static 'img/bus.png' %}">
-    </div>
-    <img width = "500px;" src = "{% static 'img/way_to_campus.jpg' %}">
-    <div id="myBtn">
-            <img width = "100px;" src = "{% static 'img/bus.png' %}">
-    </div>
-</div>
+    <div class ="content_menu">
+        <!-- The Modal -->
+        <div id="bus-Logo"><img width="200px" src="{% static 'img/spnuLogo.png'%}"></div>
+        <div class="BusBtn-Top">
+            <div class="weekdayTop" id="myBtn1"><img width="40px" src="{% static 'img/weekdayTop.png'%}"></div>
+            <div class="weekendTop" id="myBtn2"><img width="40px" src="{% static 'img/weekendTop.png'%}"></div>
+            <div class="vacationTop" id="myBtn3"><img width="40px" src="{% static 'img/vacationTop.png'%}"></div>
+        </div>
 
- 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
- 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>                                                               
-        <img width = "840px;" src = "{% static 'img/buss.gif' %}">
-      </div>
- 
+        <div class="arrowLine">
+            <img width="300px;" src="{% static 'img/arrowLine.png'%}">
+        </div>
+
+        <div class="BusBtn-Bottom">
+            <div class="weekdayBottom" id="myBtn4"><img width="40px" src="{% static 'img/weekdayBottom.png'%}"></div>
+            <div class="weekendBottom" id="myBtn5"><img width="40px" src="{% static 'img/weekendBottom.png'%}"></div>
+            <div class="vacationBottom" id="myBtn6"><img width="40px" src="{% static 'img/vacationBottom.png'%}"></div>
+        </div>
+
     </div>
+
+
+
+    <!-- The Modal -->
+    <div id="myModal1" class="modal1">
+ 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close1">&times;</span>                                                               
+          <img width = "100%;" src = "{% static 'img/bus1.gif' %}">
+        </div>
+   
+      </div>
+      
+    <!-- The Modal -->
+    <div id="myModal2" class="modal2">
+ 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close2">&times;</span>                                                               
+          <img width = "100%;" src = "{% static 'img/bus2.gif' %}">
+        </div>
+   
+      </div>
+      
+    <!-- The Modal -->
+    <div id="myModal3" class="modal3">
+ 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close3">&times;</span>                                                               
+          <img width = "100%;" src = "{% static 'img/bus3.gif' %}">
+        </div>
+   
+      </div>
+      
+    <!-- The Modal -->
+    <div id="myModal4" class="modal4">
+ 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close4">&times;</span>                                                               
+          <img width = "100%;" src = "{% static 'img/bus4.gif' %}">
+        </div>
+   
+      </div>
+      
+    <!-- The Modal -->
+    <div id="myModal5" class="modal5">
+ 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close5">&times;</span>                                                               
+          <img width = "100%;" src = "{% static 'img/bus5.gif' %}">
+        </div>
+   
+      </div>
+
+    <!-- The Modal -->
+    <div id="myModal6" class="modal6">
+ 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close6">&times;</span>                                                               
+          <img width = "100%;" src = "{% static 'img/bus6.gif' %}">
+        </div>
+   
+      </div>
 
 
 
 
 </body>
+<script>
+    window.onload = function(){
+        
+
+        var modal1 = document.getElementById('myModal1');
+    
+        var btn1 = document.getElementById("myBtn1");
+   
+        var span1 = document.getElementsByClassName("close1")[0];                                          
+   
+        btn1.onclick = function() {
+            modal1.style.display = "block";
+        }
+   
+        span1.onclick = function() {
+            modal1.style.display = "none";
+        }
+   
+        //=====================================================
+   
+        var modal2 = document.getElementById('myModal2');
+    
+        var btn2 = document.getElementById("myBtn2");
+   
+        var span2 = document.getElementsByClassName("close2")[0];                                          
+   
+        btn2.onclick = function() {
+            modal2.style.display = "block";
+        }
+   
+        span2.onclick = function() {
+            modal2.style.display = "none";
+        }
+
+        //=====================================================
+
+        var modal3 = document.getElementById('myModal3');
+
+        var btn3 = document.getElementById("myBtn3");
+    
+        var span3 = document.getElementsByClassName("close3")[0];                                          
+    
+        btn3.onclick = function() {
+            modal3.style.display = "block";
+        }
+    
+        span3.onclick = function() {
+            modal3.style.display = "none";
+        }
+        //=====================================================
+
+        var modal4 = document.getElementById('myModal4');
+
+        var btn4 = document.getElementById("myBtn4");
+    
+        var span4 = document.getElementsByClassName("close4")[0];                                          
+    
+        btn4.onclick = function() {
+            modal4.style.display = "block";
+        }
+    
+        span4.onclick = function() {
+            modal4.style.display = "none";
+        }
+
+        //=====================================================
+
+        var modal5 = document.getElementById('myModal5');
+
+        var btn5 = document.getElementById("myBtn5");
+    
+        var span5 = document.getElementsByClassName("close5")[0];                                          
+    
+        btn5.onclick = function() {
+            modal5.style.display = "block";
+        }
+    
+        span5.onclick = function() {
+            modal5.style.display = "none";
+        }
+
+        //=====================================================
+
+        var modal6 = document.getElementById('myModal6');
+
+        var btn6 = document.getElementById("myBtn6");
+    
+        var span6 = document.getElementsByClassName("close6")[0];                                          
+    
+        btn6.onclick = function() {
+            modal6.style.display = "block";
+        }
+    
+        span6.onclick = function() {
+            modal6.style.display = "none";
+        }
+
+       
+    
+        window.onclick = function(event) {
+            if (event.target == modal1 || event.target == modal2 || event.target == modal3 || event.target == modal4 || event.target == modal5 || event.target == modal6 ) {
+                modal1.style.display = "none";
+                modal2.style.display = "none";
+                modal3.style.display = "none";
+                modal4.style.display = "none";
+                modal5.style.display = "none";
+                modal6.style.display = "none";
+            }
+        }
+       };
+   
+    
+    </script>
+        
 </html>

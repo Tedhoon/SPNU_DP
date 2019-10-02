@@ -15,12 +15,13 @@
     <!-- <input type="text" placeholder="ID" maxlength="30">
     <input type="password" placeholder="Password" maxlength="40">
     <a href = "{% url 'logout'%}">로그아웃</a> -->
+    
 
     <form action="" method="POST">
         <svg id="ddugi" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,150 C0,65 120,65 120,150" fill="skyblue" stroke="#000" stroke-width="2.5" />
+            <path d="M0,150 C0,65 120,65 120,150" fill="rgb(156, 123, 86)" stroke="#000" stroke-width="2.5" />
             <!-- structure -->
-            <circle cx="60" cy="60" r="40" fill="skyblue" stroke="#000" stroke-width="2.5" />
+            <circle cx="60" cy="60" r="40" fill="rgb(156, 123, 86)" stroke="#000" stroke-width="2.5" />
             <!-- rgb(81, 151, 181) -->
             <!-- eyes -->
             <g class="eyes">
@@ -46,7 +47,7 @@
         </svg>
         {% block logins %}
         {% endblock %}
-        <div class="opacity-logo">Pusan National University</div>
+        <div class="opacity-logo"></div>
     </form>
 </body>
 </html>

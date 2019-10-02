@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Dokdo|East+Sea+Dokdo|Nanum+Pen+Script|Noto+Sans+JP:500,700,900|Titillium+Web:400,600,700,900&display=swap&subset=korean');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Dokdo|East+Sea+Dokdo|Nanum+Pen+Script|Noto+Sans+JP:500,700,900|Titillium+Web:400,600,700,900&display=swap&subset=korean');
+
 body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color : white;
@@ -45,7 +47,7 @@ header {
     text-align: right;
     padding-top : 9px;
     font-size: 14pt;
-    font-family: 'Dokdo', cursive;
+    font-family: 'East Sea Dokdo', cursive;
     margin-right : 10px;
 
     /* background-color : pink; */
@@ -60,7 +62,7 @@ header {
     margin-right : 100px;
     text-decoration: none;
     color : black;
-    font-family: 'Dokdo', cursive;
+    font-family: 'East Sea Dokdo', cursive;
 }
 
 /* nav가 위에 있는 레이어 */
@@ -174,6 +176,9 @@ footer {
     position : fixed;
     bottom : 0px;
     margin-left : 200px;
+    display :block;
+    z-index: 3;
+    background-color: white;
 }
 
 
@@ -229,14 +234,14 @@ td {
     text-align : left !important;
     /* background-color: red; */
 }
-.
+
 .table-author {
     color : rgb(51, 50, 50);
     padding-left : 0 70px;
 }
 .table-date {
     color :rgb(70, 69, 69);
-    font-size : 9pt;
+    font-size : 7pt;
 }
 .table-hits {
     color : rgb(100,90,70);
@@ -315,69 +320,7 @@ td {
 }
 
 /* 앨범 */
-.imageContents {
-    /* background-color: orange; */
-    width : 220px;
-    height : 210px;
-    display : block;
-    float : left;
-    margin-right : 45px;
-    margin-bottom: 80px;
-    border : solid 3px rgb(190, 190, 190);
-    /* border-top : 10px solid rgb(190, 190, 190);
-    border-bottom : 10px solid rgb(190, 190, 190); */
-    border-radius: 1rem;
-}
 
-.photoSpace {
-    /* background-color : purple; */
-    width : 100%;
-    height : 170px;
-    overflow: hidden;
-    
-}
-.image-photo {
-    /* background-color : blue; */
-    width : 100%;
-    height : auto;
-    
-}
-.photoText {
-    width : 100%;
-    padding-top : 6px;
-    margin-left : 4px;
-    /* background-color : green; */
-
-}
-.imageContents >a {
-    text-decoration : none;
-    color : black; 
-}
-.photoTag-tag {
-    font-size : 11pt;
-    font-weight: 700;
-}
-.photoTag-likes {
-    float: right;
-    /* background-color : blue; */
-    width : 42px;
-    padding-right : 12px;
-    margin-bottom: 2px;
-}
-
-.heart {
-    width : 18px;
-    float : left;
-    
-}
-.heartNum {
-    font-size : 11pt;
-    color : rgb(53, 47, 34);
-    padding-left : 5px;
-    font-weight: 600;
-    /* background-color : pink; */
-    float: right;
-}
 
 /* detail page */
 .DetailContents {
@@ -389,9 +332,10 @@ td {
 }
 .Flower {
     float : left;
-    width : 80px;
+    width : 10%;
     /* background-color: red; */
-    
+    display : inline-block;
+    /* margin-right : 5%; */
 }
 
 .Writer {
@@ -400,14 +344,15 @@ td {
     margin-left : 90px;
     /* background-color : orange; */
     /* border-bottom : gray 1px solid; */
+    margin-bottom : 5%;
 }
 
 .writerName {
-    width : 100%;
+    width : 50%;
     /* background-color : green; */
     float : left;
-    /* margin-left : 15px; */
-    margin-top : 20px;
+    /* margin-left : 5%; */
+    /* margin-top : 5%; */
     margin-bottom : 5px;
     font-size : 13pt;
 }
@@ -415,7 +360,7 @@ td {
     width : 50%;
     /* background-color : green; */
     float : left;
-    /* margin-left : 15px; */
+    /* margin-left : 5%; */
     /* margin-top : 5px; */
     font-size : 10pt;
     color : gray;
@@ -534,16 +479,37 @@ td {
     margin-top : 10px;
 }
 
-
+footer {
+    display: block;
+    text-align: center;
+    font-size: 0.5em;
+    margin-left: 40%;
+    
+}
 
 /* phone */
 @media (max-width : 380px) {
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 0.5em;
+        margin-left: 0%;
+        display : block;
+        z-index: 3;
+    }
 
 
 }
 
 
 @media (max-width : 430px) {
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 0.5em;
+        margin-left: 0%;
+        
+    }
     .content {
         width : 100%;
         height : 100%;
@@ -577,6 +543,14 @@ td {
 }
 @media (max-width : 769px) {
 
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 0.5em;
+        margin-left: 0%;
+        
+    }
+
 
     /* 게시판 디테일페이지 */
     .content {
@@ -601,6 +575,18 @@ td {
         /* padding-top : 60px; */
         /* border-bottom : gray 1px solid; */
     }
+    .Flower {
+        min-width : 50px;
+    }
+    .writerName {
+        font-size : 10pt;
+    }
+    .writeTime {
+        font-size : 8pt;
+    }
+    .ModifyRemove {
+        font-size : 8pt;
+    }
     .board-Text {
         /* background-color : red; */
         width : 100%;
@@ -612,6 +598,13 @@ td {
 }
 @media (max-width : 940px){
     /* 게시판페이지 */
+    footer {
+        display: block;
+        text-align: center;
+        font-size: 0.5em;
+        margin-left: 0%;
+        
+    }
     nav {
         display : none;
     }

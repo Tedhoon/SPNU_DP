@@ -11,15 +11,10 @@
 </head>
 <body>
     <div class="Top">
-        <div class="Logo"><a href="">SPNU</a></div>
-        <!-- <div class="Bus"><a href="{% url 'bus' %}"><img src="{%static 'img/mainBus.png'%}"></a></div>
-        <div class="FoodMenu"><a href="{% url 'menu' %}"><img src="{%static 'img/mainRice.png'%}"></a></div> -->
         <div class="LogInOut">    
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">로그아웃</a>
-            
-            <!-- <a href="#">프로필</a> -->
-            
+         
             {%else%}
             <a href="{% url 'login' %}">로그인</a>
                 
@@ -28,13 +23,10 @@
     </div>
 
     <div class="Main">
-        <div class="Hello">
-            <div class="busriceImg-container">
-                <div class="Bus"><a href="{% url 'bus' %}"><img src="{%static 'img/mainBus.png'%}"></a></div>
-                <div class="FoodMenu"><a href="{% url 'menu' %}"><img src="{%static 'img/mainRice.png'%}"></a></div>
-                <!-- 유저 : {{user.username}} <br>
-                이메일 : {{user.email}} -->
-            </div>
+        <div class="main-Logo"><img width="250px" src="{% static 'img/main-Logo.png'%}"></div>
+        <div class="BusandBab">
+            <a href="{% url 'bus' %}"><div class="main-Bus">버스</div></a>
+            <a href="{% url 'menu' %}"><div class="main-Bab">식단</div></a>
         </div>
         <div class="Icon">
             <table class="aa">
@@ -91,7 +83,12 @@
                     </td>
                 </tr>
             </table>
+        
+
         </div>
+
     </div>
+    <footer>Copyright by © SPNU All rights reserved.</footer>
+
 </body>
 </html>

@@ -1,0 +1,285 @@
+/* @import url('https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap'); */
+/* content */
+@import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
+.photo-content {
+    margin : 0 0 0 10%;
+}
+.imageContents {
+    /* background-color: orange; */
+    width : 250px;
+    height : 250px;
+    display : block;
+    margin-right : 45px;
+    margin-bottom: 80px;
+    float : left;
+    
+}
+    .image-title {
+        margin-top : 10px;
+        border-bottom: 2px ridge rgb(170,165,125);
+        font-family: 'Stylish', sans-serif;
+
+        /* border-left : 2px solid rgb(170,165,125); */
+    }
+    .photoSpace1 {
+    /* border : solid 2px rgb(190, 190, 190); */
+    width : 240px;
+    height : 240px;
+    box-shadow : 3px 3px 2px 1px rgba(94, 73, 64, 0.5);
+    margin-bottom : 3px;
+
+    }
+        .image-photo {
+            width : 242px;
+            height : 242px;
+            position : absolute;
+            z-index : -2;
+        }
+        .photoTag-likes {
+            margin-top : 220px;
+            margin-left : 200px;
+            width : 35px;
+            height : 20px;
+            position : absolute;
+            z-index : -1;
+            float : right;
+            /* background-color: aqua; */
+        }
+            .heart {
+                width : 16px;
+                float : left;
+                padding-top : 2px;
+            }
+            .heartNum {
+                font-size : 10pt;
+                color : white;
+                padding-left : 3px;
+                font-weight: 400;
+                /* background-color : pink; */
+                float: right;
+            } 
+
+@media (max-width : 430px) {
+    .mfp-content {
+        /* margin: 0; */
+        padding: 0px 20px;
+        width: 60%;
+        font-size : 9pt;
+        
+    }
+    .mfp-title {
+        margin-top :2px;
+    }
+}
+            
+            
+/* @media (max-width : 940px) {
+    .imageContents {
+        margin-right : 5px;
+        margin-bottom : 7px;
+        width : 28%;
+        height : 5%;
+    }
+    .photoSpace1 {
+        width : 100%;
+    }
+    .image-photo {
+        width : 25%;
+        display: inline-block;
+    }
+    .photoTag-likes {
+        margin-top : 75%;
+        margin-left : 75%;
+    }
+}
+@media (max-width : 770px) {
+
+
+    .imageContents {
+        overflow: hidden;
+        height : 190px;
+    }
+    .photoSpace1 {
+        width : 100%;
+        height : 180px;
+
+    }
+    .image-photo {
+        width : 25%;
+        height: 190px;
+    }
+    .photoTag-likes {
+        width : 25%;
+        height: 190px;
+        margin-top : 170px;
+        margin-left : 170px;
+    }
+    .heart {
+        width : 10px;
+        margin-top : 4px;
+    }
+}
+@media (max-width : 531px) {
+    .imageContents {
+        overflow: hidden;
+        height : 133px;
+    }
+    .photoSpace1 {
+        width : 100%;
+        height : 133px;
+
+    }
+    .image-photo {
+        width : 25%;
+        height: 133px;
+    }
+    .photoTag-likes {
+        width : 25%;
+        height: 133px;
+        margin-top : 130px;
+        margin-left : 130px;
+    }
+    .heart {
+        width : 10px;
+        margin-top : 4px;
+    }
+}
+@media (max-width : 430px) {
+    .imageContents {
+        overflow: hidden;
+        height : 108px;
+    }
+    .photoSpace1 {
+        width : 100%;
+        height : 108px;
+
+    }
+    .image-photo {
+        width : 25%;
+        height: 108px;
+    }
+
+    .photoTag-likes {
+        width : 25%;
+        height: 108px;
+        margin-top : 85px;
+        margin-left : 85px;
+    }
+    .heart {
+        width : 10px;
+        margin-top : 4px;
+    }
+}
+@media (max-width : 330px) {
+    .imageContents {
+        overflow: hidden;
+        height : 85px;
+    }
+    .photoSpace1 {
+        width : 100%;
+        height : 85px;
+
+    }
+    .image-photo {
+        width : 25%;
+        height: 85px;
+    }
+    .photoTag-likes {
+        width : 25%;
+        height: 85px;
+        margin-top : 65px;
+        margin-left : 65px;
+    }
+    .heart {
+        width : 10px;
+        margin-top : 4px;
+    }
+} */
+
+/* 모달창 */
+    /* The Modal (background) */
+    .mfp {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 200; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content/Box */
+    .mfp-content {
+        background-color: #fefefe;
+        margin: 10% auto; /* 15% from the top and centered */
+        padding: 10px 20px;
+        border: 1px solid #888;
+        width: 40%; /* Could be more or less, depending on screen size */                          
+    }
+    /* The Close Button */
+    /* .mfp-close {
+        color: #aaa;
+        float: right;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top : 0;
+        width : 20px;
+        height : 20px;
+        text-align: center;
+    } */
+    .mfp-close:hover,
+    .mfp-close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 모달창 세부컨텐츠 */
+
+.mfp-img2 {
+    width : 100%;
+    float : left;
+}
+.mfp-title {
+    width : 90%;
+    display : inline-block;
+}
+.mfp-heart_hits {
+    width : 90%;
+    /* background-color : red; */
+    /* max-height : 25px; */
+
+}
+    .mfp-heart {
+        /* background-color : pink; */
+        float : left;
+        display: block;
+        width : 100%;
+    }
+    .mfp-heart>img {
+        width : 16px;
+        /* float : left; */
+        padding-top : 5px;
+        padding-right : 7px;
+        display : block;
+    }
+    .mfp-heartNum {
+        float : left;
+        
+    }
+    .mfp-hits {
+        /* max-height : 25px; */
+        /* background-color : yellow; */
+        float : left;
+        display: block;
+        width : 100%;
+    }
+
+.mfp-created_date {
+    width : 90%;
+    display : inline-block;
+}
+

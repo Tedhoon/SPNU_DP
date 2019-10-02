@@ -12,29 +12,118 @@
 <div class="photo-content">
 
     {% for image in images %}
-    <div class="imageContents">
-    
-    <a href="{%url 'image_detail' image.id%}">
-        
-        <div class="photoSpace">
-            <img class="image-photo"  src="{{image.image.url}}"><br>
-        </div>
-        <div class=photoText>
-            <div class="photoTag-tag">{{image.title}}</div>
-                <!-- title을 나중에 태그로 만들어주기 -->
-            <div class="photoTag-likes">
-                <img class="heart" border-radius="2rem" src="{% static 'img/hearts.png' %}">
-                <div class="heartNum">32</div>
-                <!-- {{image.likes}} -->
-            </div>
+    <div id="{{forloop.counter}}" class ="helloimage" >
 
+    <div class="imageContents">
+
+        <div class="photoSpace1">
+            <img class="image-photo" src="{{image.image.url}}">
+            <!-- <div class="photoTag-likes">
+                <img class="heart" border-radius="2rem" src="{% static 'img/heart2.png' %}">
+                <div class="heartNum"></div>
+            </div> -->
         </div>
-    </a>
+        <div class="image-title">&#35;&nbsp;&nbsp;{{image.title}}</div>    
     </div>
-     
+
+
+
+
+
+    <!-- the model -->
+    <div id="{{forloop.counter}}helloimage" class="mfp">
+
+    <div class="mfp-content">
+        
+        <div class="mfp-figure">
+            <!-- clase button -->
+            <div class="mfp-close"></div>
+
+            <ul class="mfp-context">
+                <li class=""><img style="margin-bottom : 5%;" class="mfp-img2" alt="#spnuLife" src="{{image.image.url}}" style="max-width:570px;"></li>
+
+                <li class="mfp-title">&#35;&nbsp;&nbsp;{{image.title}}</li>
+                <li class="mfp-desc" style ="border-top : solid 1px rgb(170,165,125); border-bottom : solid 1px rgb(170,165,125);">&nbsp;&nbsp;{{image.desc}}<br><br><br><br> </li>
+                <li>
+                    <div class="mfp-heart_hits">                
+                        <!-- <div class="mfp-heart">
+                            <img border-radius="2rem" src="{% static 'img/hearts.png' %}">
+                            <div class="mfp-heartNum">32</div>
+                        </div> -->
+                        <!-- <div class="mfp-hits">조회수 {{image.hits}}</div> -->
+                    </div>
+                </li>
+                <li class="mfp-created_date"><br>{{image.created_date}}</li>
+                <li class="mfp-author">{{image.author}}</li>
+            </ul>
+        </div>
+    </div>
+        
+    </div>
+
+
+    </div>
     {% endfor %}
       
 </div>
+
+
+<script>
+
+    let span1;
+            
+            
+    window.onload = function(){
+            
+    
+        const num = document.getElementsByClassName("helloimage").length;
         
+
+        for(let i=1; i<=num; i++) {
+            
+
+
+            let btn = document.getElementById(i);
+            let modal = document.getElementById(i+"helloimage");
+            let span = document.getElementsByClassName("mfp-close")[0];
+
+            
+            
+            span1 = span;
+            
+            btn.onclick = function(){
+                modal.style.display = "block";
+            };
+
+
+    };    
+
+
+    span1.onclick = function(){
+            
+        for(i=1; i<num; i++){
+            
+            let modal1 = document.getElementById(i+"helloimage");
+            
+            console.log(modal1)
+            modal1.style.display = "none";   
+        }
+    };
+
+    window.onclick = function(event) {
+
+        for(i=1; i<num+1; i++){
+            let modal1 = document.getElementById(i+"helloimage");
+            
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+        }
+
+    };
+        
+    };
+
+</script>
 
 {% endblock contents %}

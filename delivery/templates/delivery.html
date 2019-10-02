@@ -3,49 +3,124 @@
 {% load staticfiles %}
 
 <div class="PageName">생자대배달</div>
+<div class="pagecontent-delivery">
 
-<div class="photo-content">
+{% for delivery_list in delivery_lists %}
+<div id="{{forloop.counter}}" class ="hello" >
+<div class="DeliveryList-Container">
 
-        
-        {% for delivery_list in delivery_lists %}
-        <div id="{{forloop.counter}}" class ="hello" >
-        <div class="deliveryContents">
 
-            
-            
-            <!-- <a href="{% url 'delivery_list' delivery_list.id %}"> -->
-                <div class="photoSpace">
-                    <img class="delivery-photo" width = "300px" src="{{delivery_list.image.url}}"><br>
-                </div>
-                <div class="delivery-text">
-                    <div class="delivery-title">{{delivery_list.title}}</div>
-                    <div class="delivery-price">배달료 : 6000원</div>
-                </div>
-            <!-- </a> -->
+    <div class="restaurantBox" style="cursor : pointer;">
+        <table class="restaurant-list-Table">
+            <tbody class="restaurnt-list-tbody">
+                <tr class="restaurnt-list-tr">
+                    <td class="restaurnt-list-td" id="td1">
+                        <div>
+                            <img class="delivery-photo" src="{{delivery_list.image.url}}">
+                        </div>
+                    </td>
+                    <td class="restaurnt-list-td" id="td2">
+                        <div class="restaurants-info">
+                            <div class="restaurant-name">{{delivery_list.title}}</div>
+                            <div class="restaurant-deliveryCondition">배달조건</div>
+                            <div class="restaurant-deliveryTime">배달시간</div>
+                            <div class="restaurant-deliveryPrice">배달료</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+</div>
+
+
+<!-- The Modal -->
+
+<div id="{{forloop.counter}}hello" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+        <!-- infobox -->
+        <span class="close">&times;</span>
+
+        <div class="modal-restaurantDelivery-info-Table">
+
+            <div class="modal-restaurant-Name">{{delivery_list.title}}</div>
+
+            <div class="modal-restaurant-Photo">
+                <img class="delivery-photo" width = "300px" src="{{delivery_list.image.url}}">
             </div>
-            
 
-            <!-- The Modal -->
-            <div id="{{forloop.counter}}hello" class="modal">
+            <ul class="modal-restaurant-TextContainer">
+                <li class="modal-delivery-Condition">세마리 이상 배달(배달조건)</li>
+                <li class="modal-delivery-PaymentMethod">카드 현금 (결제수단)</li>
+                <li class="modal-deliveryprice">배달료 : 6000원</li>
+                <li class="modal-deliveryTime">배달시간 : 40~50분</li>
+                
+            </ul>
 
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    {{delivery_list.title}}<br>
-                    {{delivery_list.description}}<br>
-                    {{delivery_list.menu}}<br>
-                    {{delivery_list.notion}}<br>
-                    <img src= "{{delivery_list.image.url}}" width="300px;">
+        </div>
 
+        <div class="foralign">
+        <!-- menubox -->
+        <div class="modal-restaurant-MenuContainer">
+
+            <ul>
+                <li><b>메뉴</b></li>
+                <li>치킨 1500원<br>핫케잌 2000원<br>돼지국밥 3000원<br>사탕 200원<br>떡볶이 2000원</li>
+            </ul>
+
+        </div>
+
+        <!-- restaurant Info -->
+        <div class="modal-restaurant-infoContainer">
+            <ul>
+                <li><b>사장님알림</b></li>
+                <li>리뷰이벤트를 진행합니다!!</li>
+            </ul>
+            <ul>
+                <li class><b>업체정보</b></li>
+                <li class>업체번호 051-1234-4567</li>
+                <li class>영업시간 12:00~22:00</li>
+            </ul>
+
+            <ul>
+                <div class><b>결제정보</b></div>
+                <div class>최소주문금액 : 10.000원</div>
+                <div class>결제수단 : 신용카드 , 현금</div>
+
+            </ul>
+
+            <div>    
+                <div class><b>사업자정보</b></div>
+                <div class>상호명 : 피자에땅</div>
+                <div class>사업자등록번호 : 621-13-15122</div>
+            </div>
+
+            <div>
+                <div class><b>원산지정보</b></div>
+                <div class>
+                    치킨텐더 : 치킨텐더(닭고기 : 국내산)
                 </div>
-
             </div>
 
         </div>
-        {% endfor %}
-        
+        </div>
+    </div>
+
+    
+    
 
 </div>
+{% endfor %}
+
+</div>
+
 
 <script>
 
@@ -105,43 +180,5 @@
 
 
 </script>
-<style>
-    /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */                          
-}
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-</style>
 
 {% endblock contents %}
