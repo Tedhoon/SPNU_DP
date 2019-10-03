@@ -4,22 +4,51 @@
 <style>
     body{
         margin-top: 5%;
+       
+    }
+    form {
+        width :100%;
+        margin-bottom : 200px;
     }
 
     .sub{
-    margin-left : 65%;
+        margin-right : 3%;
+        float : right;
+        position : relative;
+        z-index : 4;
     }
+        .testhazi1 {
+            width : 100%;
+            background-color : red;
+        }
+        .testhazi2 {
+            width : 100%;
+            /* background-color : blue; */
+        }
+        .testhazi3 {
+            width : 100%;
+
+            background-color : purple;
+        }
+
+        #cke_id_text{
+            width :97% !important;
+        }
 </style>
 
     
     <form action="{% url 'notice_post'%}" method="POST" enctype="multipart/form-data">
         
-        {{ notice_form.media }}     
-        {{ notice_form.as_p|safe }}
-
-        {% csrf_token %}
+        <div class="testhazi1">
+            {{ notice_form.media }}     
+        </div>
+        <div class="testhazi2">
+            {{ notice_form.as_p|safe }}
+        </div>
+        <div class="testhazi13">
+            {% csrf_token %}
+        </div>
     
-        
         <input class ="sub" type="submit" value="글쓰기">
     </form> 
         
