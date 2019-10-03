@@ -1,4 +1,7 @@
 /* 버스컨텐프 */
+body{
+    margin : 0;
+}
 .content_menu {
     width : 100%;
     height : 100%;

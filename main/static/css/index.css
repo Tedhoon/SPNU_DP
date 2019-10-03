@@ -153,6 +153,12 @@ body {
     margin-top : 50px;
 }
 
+#prepare1, #prepare2 {
+    font-size: 1.5em;
+    padding-top : 10px;
+    margin-bottom : 0;
+    color : white;
+}
 
 
 footer {

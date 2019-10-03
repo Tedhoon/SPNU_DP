@@ -44,7 +44,7 @@ class NoticeBoard(models.Model, HitCountMixin):
 
 class FreeBoard(models.Model, HitCountMixin):
     
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=20)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, default=1,on_delete=models.CASCADE) # 유저 지워지면 다 지워지게
     text = RichTextUploadingField()
     created_date = models.DateField(auto_now_add=True)

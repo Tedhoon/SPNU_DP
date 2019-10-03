@@ -68,7 +68,7 @@
                     <td>
                         <div class="Icons">
                             <a href="">
-                                <div class="photo"><img id="animal5" src="{% static 'img/squirrel.png'%}"></div>
+                                <div class="photo"><div id = "prepare1" style="display: none;">준비중인 페이지</div><img id="animal5" src="{% static 'img/squirrel.png'%}"></div>
                                 <div class="iconsName">홍보게시판</div>
                             </a>
                         </div>
@@ -76,7 +76,7 @@
                     <td>
                         <div class="Icons">
                             <a href="">
-                                <div class="photo"><img id="animal6" src="{% static 'img/elephant.png'%}"></div>
+                                <div class="photo"><div id = "prepare2" style="display: none;">준비중인 페이지</div><img id="animal6" src="{% static 'img/elephant.png'%}"></div>
                                 <div class="iconsName">분실물</div>
                             </a>
                         </div>
@@ -91,4 +91,28 @@
     <footer>Copyright by © SPNU All rights reserved.</footer>
 
 </body>
+<script>
+
+    window.onload = function(){
+    
+
+
+        const target1 = document.getElementById("prepare1");
+        let notp1 = document.getElementById("animal5");
+        notp1.onclick = function(){
+            target1.style.display = "block";
+        }
+
+        
+        const target2 = document.getElementById("prepare2");
+        let notp2 = document.getElementById("animal6");
+        notp2.onclick = function(){
+            target2.style.display = "block";
+        }
+
+
+
+}
+</script>
 </html>
+

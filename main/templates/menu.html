@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>식단</title>
+    <title>식단</title> 
+    <link rel="stylesheet" href="{% static 'css/menu.css'%}" type="text/css">
+
 
 
     
@@ -54,75 +56,25 @@ window.onload = function(){
     };
     
     </script>
-    <style>
-        body{
-            background-color : rgb(100,90,70);
-        }
-        img{
-            border-radius: 10px;
-        }
-        .modal1 , .modal2 {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
-    
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 50%; /* Could be more or less, depending on screen size */                          
-        }
-        /* The Close Button */
-        .close1 ,.close2 {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close1:hover, .close2:hover,
-        .close1:focus, .close2:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #myBtn1 , #myBtn2 {
-            float:left;
-            margin: 20px;
-            
-        }
-        .content_menu{
-            text-align: center;
-            margin-left: 30%;
-            margin-top : 20%;
-        }
-    
-    
-    </style>
     
 </head>
 <body>
+    <div class="menucontentBox">
+        <div class="menu-Logo"><img width="260px" src="{% static 'img/main-Logo.png'%}"></div>
 
-<div class ="content_menu">
-    <!-- The Modal -->
-    <div id="myBtn1">
-            <img width = "100px;" src = "{% static 'img/dorm.jpg' %}">
-    </div>
+        <div class ="content_foodmenu">
+            <!-- The Modal -->
+            <div id="myBtn1">
+                <img width = "27px" src = "{% static 'img/menuRice.png' %}">
+                <div class="dormMenu">기숙사</div>
+            </div> 
 
-    <div id="myBtn2">
-            <img width = "100px;" src = "{% static 'img/dorm2.jpg' %}">
+            <div id="myBtn2">
+                <img width = "27px" src = "{% static 'img/menuRice.png' %}">
+                <div class="notdormMenu">학생회관</div>
+            </div>
+        </div>
     </div>
-</div>
 
  
 

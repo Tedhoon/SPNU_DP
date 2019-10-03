@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Dokdo|East+Sea+Dokdo|Nanum+Pen+Script|Noto+Sans+JP:500,700,900|Titillium+Web:400,600,700,900&display=swap&subset=korean');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Dokdo|East+Sea+Dokdo|Nanum+Pen+Script|Noto+Sans+JP:500,700,900|Titillium+Web:400,600,700,900&display=swap&subset=korean');
-
+@import url('https://fonts.googleapis.com/css?family=Dokdo|East+Sea+Dokdo|Gaegu|Noto+Sans+KR|Poor+Story|Stylish&display=swap');
 body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color : white;
@@ -10,9 +10,9 @@ body {
     
 }
 header {
-    width : 98%;
+    width : 100%;
     height : 35px;
-    background-color : white;
+    background-color : rgb(89,82,48);
     border-bottom: 1px rgb(192, 192, 192) solid;
     position : fixed;
     top : 0;
@@ -61,15 +61,15 @@ header {
     font-size : 15pt;
     margin-right : 100px;
     text-decoration: none;
-    color : black;
-    font-family: 'East Sea Dokdo', cursive;
+    color : rgb(199,197,170);
+    font-family: 'Gaegu', cursive;
 }
 
 /* nav가 위에 있는 레이어 */
 nav {
     width : 200px;
     height : 100%;
-    background-color : rgb(100,90,70);
+    background-color : rgb(199,197,170);
     position : fixed;
     top : 0px;
     left : 0px;
@@ -80,7 +80,7 @@ nav {
 .nav-head {
     width : 100%;
     height : 40px;
-    background-color : white;
+    background-color : rgb(199,197,170);
     top : 0;
     left : 0;
 }
@@ -93,23 +93,43 @@ nav {
     text-decoration: none;
 
 }
-.nav>a , .Logo>a, header>a {
+.nav>a , .Logo>a, header>a, .nav-content>a {
     text-decoration: none;
+    color : black;
 }
 .nav-icon {
-    width : 90%;
+    width : 100%;
     height : 40px;
     text-align : center;
-    margin : 10px auto;
+    margin : 20px auto;
     letter-spacing: 1pt;
+    padding-top : 5px;
 }
 .nav-icon>a {
     text-decoration: none;
-    font-weight: 400;
-    font-size : 10pt;
-    color : white;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    font-size : 16pt;
+    color : rgb(51, 47, 28);
+    font-family: 'Poor Story', cursive;
 }
+.nav-iconName {
+    margin-top : 6px;
+    display: inline-block;
+    width : 120px;
+    text-align: left;
+    /* background-color : pink; */
+}
+
+.nav-icon>img {
+    margin-top : 0;
+    width : 30px;
+    display : inline-block;
+    float : left;
+    margin-left : 10px;
+    /* background-color : red; */
+}
+
+
 /* content가 아래있는 레이어 */
 .content {
     width : 70%;
@@ -138,11 +158,14 @@ nav {
     font-size : 15pt;
     font-weight: 800;
     /* background-color : red; */
+    display : inline-block;
 }
+.notice-Icon {
+    width : 30%;
+    /* background-color : yellow; */
+    display : inline-block;
+    margin-left : 3px;
 
-.plusbtn {
-    width : 15px;
-    /* background-color: blue; */
 }
 
 
@@ -331,6 +354,13 @@ td {
     margin-left : 30px;
 }
 .Flower {
+    float : left;
+    width : 10%;
+    /* background-color: red; */
+    display : inline-block;
+    /* margin-right : 5%; */
+}
+.noticedetail-colorIcon {
     float : left;
     width : 10%;
     /* background-color: red; */
@@ -578,6 +608,13 @@ footer {
     .Flower {
         min-width : 50px;
     }
+    .noticedetail-colorIcon {
+        width : 50px;
+        padding-right : 2px;
+    }
+    .noticedetail-colorIcon>img {
+        width : 40px;
+    }
     .writerName {
         font-size : 10pt;
     }
@@ -622,16 +659,16 @@ footer {
         margin-top : 10px;
     }
     #NavLine1 {
-        border-top : rgb(83, 83, 83) 4px solid;
+        border-top : rgb(154,124,83) 4px solid;
         margin-bottom : 3px;
     }
     #NavLine2 {
-        border-top : rgb(83, 83, 83) 4px solid;
+        border-top : rgb(121,119,88) 4px solid;
         margin-bottom : 3px;
 
     }
     #NavLine3 {
-        border-top : rgb(83, 83, 83) 4px solid;
+        border-top : rgb(183,200,181) 4px solid;
     }
     .Login-In, .Login-Out {
         margin-right : 30px;
@@ -665,5 +702,12 @@ footer {
     }
     .Writer {
         padding-top : 0;
+    }
+
+}
+@media (max-width : 1025px) {
+    .noticedetail-colorIcon {
+        /* width : 50px; */
+        padding-right : 10px;
     }
 }
