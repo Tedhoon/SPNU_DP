@@ -259,6 +259,14 @@ footer {
         width : 500px;
     }
 }
+@media (min-width : 600px) {
+    .LogInOut {
+        width : 100px;
+        text-align : left;
+        padding-left : 20px
+    }
+
+}
 
 
 

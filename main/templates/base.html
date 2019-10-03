@@ -7,34 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SPNU : 부산대 생명자원과학대학 커뮤니티</title>
     
-<!-- 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-
-
-        $(document).ready(function(){
-            $('.nav-content').hover(function(){
-                $('.nav-content').toggle()
-                
-            });
-            });
-
-        
-    </script> -->
     
     <link rel="stylesheet" href="{% static 'css/test1.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/delivery.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/image.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/hambuger.css' %}" type="text/css">
+
 </head>
 <body>
     <header>
         <a href = "{% url 'index' %}"><div class="Logo"><img height="40px" src="{% static 'img/main-Logo.png'%}"></div></a>
-        <div class="Nav-line3-container">
-            <div id="NavLine1"></div>
-            <div id="NavLine2"></div>
-            <div id="NavLine3"></div>
+        
+ 
+                <div class="Nav-line3-container">
+                    <div id="NavLine1"></div>
+                    <div id="NavLine2"></div>
+                    <div id="NavLine3"></div>
 
-        </div>
+                    <div class="hambuger-container">
+                        <ul class="hamnuger-nav-contents">
+                            <li><a href="/notice">공지게시판</a></li>
+                            <li><a href="/free">자유게시판</a></li>
+                            <li><a href="/image">s-album</a></li>
+                            <li><a href="/delivery">s-배달</a></li>
+                        </ul>
+                    
+                    </div>                    
+
+                </div>
+
+
         
     {% if user.is_authenticated %}
         <div class="Login">
@@ -47,6 +49,8 @@
 
 
     </header>
+
+
     <nav>
         <div class="nav-head"></div>
         <div class="nav-content">
