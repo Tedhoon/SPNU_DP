@@ -28,7 +28,7 @@
 </head>
 <body>
     <header>
-        <a href = "{% url 'index' %}"><div class="Logo">SPNU</div></a>
+        <a href = "{% url 'index' %}"><div class="Logo"><img height="40px" src="{% static 'img/main-Logo.png'%}"></div></a>
         <div class="Nav-line3-container">
             <div id="NavLine1"></div>
             <div id="NavLine2"></div>
@@ -50,10 +50,22 @@
     <nav>
         <div class="nav-head"></div>
         <div class="nav-content">
-            <div class="nav-icon"><a href="{% url 'notice' %}">공지게시판</a></div>
-            <div class="nav-icon"><a href="{% url 'free' %}">자유게시판</a></div>
-            <div class="nav-icon"><a href="{% url 'image' %}">S-album</a></div>
-            <div class="nav-icon"><a href="{% url 'delivery' %}">S-배달</a></div>
+            <a href="{% url 'notice' %}"><div class="nav-icon">
+                <span class="nav-iconName">공지게시판</span>
+                <img class="noticeBlackicons" width="30px"  src="{% static 'img/noticeBlackicons.png'%}">
+            </div></a>
+            <a href="{% url 'free' %}"><div class="nav-icon">
+                <span class="nav-iconName">자유게시판</span>
+                <img class="freeBlackicons" width="30px" src="{% static 'img/freeBlackicons.png'%}">
+            </div></a>
+            <a href="{% url 'image' %}"><div class="nav-icon">
+                <span class="nav-iconName">S-album</span>
+                <img class="albumBlackicons" width="30px" src="{% static 'img/albumBlackicons.png'%}">
+            </div></a>
+            <a href="{% url 'delivery' %}"><div class="nav-icon">
+                <span class="nav-iconName">S-배달</span>
+                <img class="deliveryBlackicons" width="30px" src="{% static 'img/deliveryBlackicons.png'%}">
+            </div></a>
         </div>
     </nav>
     <div class="content">
