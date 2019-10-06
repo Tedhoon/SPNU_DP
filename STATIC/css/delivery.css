@@ -1,4 +1,7 @@
 /* content */
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Noto+Sans+KR&display=swap');
+
+
 .pagecontent-delivery {
     width : 100%;
     margin : 70px auto;    
@@ -64,15 +67,12 @@
             .restaurant-name {
                 font-size : 120%;
                 width : 100%;
+                /* font-family: 'Jua', sans-serif !important; */
+                font-family: 'Do Hyeon', sans-serif;
+                /* font-family: 'Noto Sans KR', sans-serif; */
                 /* background-color : red; */
             }
-            .restaurant-deliveryCondition, .restaurant-deliveryTime {
-                font-size : 90%;
-            }
-            .restaurant-deliveryPrice {
-                font-size : 90%;
-                color : rgb(161, 152, 84);
-            }
+
 
 /* 모달창 */
 
@@ -119,17 +119,19 @@
     /* 모달창 내부컨텐츠 구성 */
     .modal-restaurantDelivery-info-Table {
         width : 100%;
-        height : 150px;
+        height : 120px;
         /* background-color : orange; */
         display : block;
         padding : 0;
-        border-bottom : 1px solid #d9d9d9;        
+        /* border-bottom : 1px solid #d9d9d9;         */
     }
         .modal-restaurant-Name {
             width : 100%;
             font-size : 120%;
             /* background-color : yellow; */
             margin-bottom : 10px;
+            font-family: 'Do Hyeon', sans-serif;
+
         }
         .modal-restaurant-Photo {
             width : 80px;
@@ -165,7 +167,6 @@
         /* background-color : red; */
         display : block;
         font-size : 90%;
-
     }
     
 @media ( max-width : 425px) {

@@ -112,12 +112,17 @@ nav {
     color : rgb(51, 47, 28);
     font-family: 'Poor Story', cursive;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Noto+Sans+KR&display=swap');
 .nav-iconName {
     margin-top : 6px;
     display: inline-block;
     width : 120px;
     text-align: left;
     /* background-color : pink; */
+    /* font-family: 'Jua', sans-serif !important; */
+     font-family: 'Do Hyeon', sans-serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
 }
 
 .nav-icon>img {
@@ -155,10 +160,14 @@ nav {
     border-left : 5px solid rgb(170,165,125);
     padding-left : 10px;
     margin-bottom : 12px;
-    font-size : 15pt;
-    font-weight: 800;
+    font-size : 16pt;
+    /* font-weight: 600; */
+    letter-spacing: 2px;
     /* background-color : red; */
     display : inline-block;
+    /* font-family: 'Jua', sans-serif !important; */
+    font-family: 'Do Hyeon', sans-serif;
+
 }
 .notice-Icon {
     width : 30%;
