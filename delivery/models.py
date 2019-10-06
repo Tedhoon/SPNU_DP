@@ -1,18 +1,11 @@
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class DeliveryList(models.Model):
-    title = models.CharField(max_length=100)
-    notion = models.CharField(max_length=300)
+    title = models.CharField(max_length=100, blank=True, null=True)
     image = models.ImageField(upload_to='image/', blank=True, null=True)
-    menu = models.TextField()
-    description = models.CharField(max_length = 150)
+    text = RichTextUploadingField(null = True, blank =True)
+
 
     def __str__(self):
         return self.title
-
-class DeliveryGroup(models.Model):
-    pass
-
-class DeliveryService(models.Model):
-    pass
-    
