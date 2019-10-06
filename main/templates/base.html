@@ -19,13 +19,14 @@
         <a href = "{% url 'index' %}"><div class="Logo"><img height="40px" src="{% static 'img/main-Logo.png'%}"></div></a>
         
  
-                <div class="Nav-line3-container">
+                <div class="Nav-line3-container" id="Nav-line3-container">
                     <div id="NavLine1"></div>
                     <div id="NavLine2"></div>
                     <div id="NavLine3"></div>
 
-                    <div class="hambuger-container">
-                        <ul class="hamnuger-nav-contents">
+                    <div class="hambuger-container" id="hambuger-container">
+                        <ul class="hamnuger-nav-contents" id="hamnuger-nav-contents">
+                            <li><a href="/">메인</a></li>
                             <li><a href="/notice">공지게시판</a></li>
                             <li><a href="/free">자유게시판</a></li>
                             <li><a href="/image">s-album</a></li>
@@ -82,8 +83,29 @@
 
         </div>
     </div>
-    <footer>Copyright by © SPNU All rights reserved.</footer>
-    
+    <!-- <footer>Copyright by © SPNU All rights reserved.</footer> -->
+    <script>
+
+    window.onload = function(){
+
+
+
+        const target1 = document.getElementById("hambuger-container");
+        let notp = document.getElementById("Nav-line3-container");
+        notp.onclick = function(){
+            target1.style.display = "block";
+        }  
+
+        window.onclick = function(event) {
+            if (event.target == target1) {
+                target1.style.display = "none";
+            }
+        }
+
+
+    }
+        
+    </script>
 </body>
 </html>
 
