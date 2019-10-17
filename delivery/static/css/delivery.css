@@ -1,6 +1,57 @@
 /* content */
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Noto+Sans+KR&display=swap');
 
+button{
+    margin-top : 0px;
+    margin-left : 35px;
+    margin-bottom : 0px;
+    /* display: inline */
+    /* text-align: center; */
+    background-color : rgb(89,82,48);
+    color:#fff;
+    border:none;
+    position:relative;
+    height:40px;
+    font-size:1em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    font-family: 'Do Hyeon', sans-serif;
+}
+  button:hover{
+    background:#fff;
+    color : rgb(89,82,48);
+
+    /* color:#1AAB8A; */
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background-color : rgb(89,82,48);
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+
+
+.openchatting_link {
+    font: size 0.1em;
+    text-decoration: none;
+}
 
 .pagecontent-delivery {
     width : 100%;
